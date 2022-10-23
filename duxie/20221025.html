@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>毒蝎</title>
+    <style>
+        @charset "UTF-8";
+        .btn-djdh1, .btn-djdh1-over, .btn-djgm1, .btn-djgm1-over, .btn-djgm2, .btn-djlq, .btn-djlq-over, .btn-djlq2, .btn-djlq2-over, .btn-look1, .btn-lot1, .btn-lot2, .nav1, .nav2, .part1 .gift-box .gift-item .btn-djgm1.over, .part1 .gift-box .gift-item .goods-wrap .goods-item .btn-djlq.over, .part2 .half-wrap .btn-djlq2.over, .part3 .prize-wrap .prize-item .btn-djdh1.over, .spr_btn_pc {
+            background-image: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/spr_btn_pc.png?2022_10_20_18_45_37);
+            background-size: 875px 938px;
+            background-repeat: no-repeat
+        }
+
+        .btn-djdh1-over {
+            background-position: -526px -439px;
+            width: 211px;
+            height: 52px
+        }
+
+        .btn-djdh1 {
+            background-position: -526px -382px;
+            width: 211px;
+            height: 52px
+        }
+
+        .btn-djgm1-over {
+            background-position: -526px -244px;
+            width: 263px;
+            height: 64px
+        }
+
+        .btn-djgm1 {
+            background-position: -526px -313px;
+            width: 263px;
+            height: 64px
+        }
+
+        .btn-djgm2 {
+            background-position: -526px 0;
+            width: 349px;
+            height: 63px
+        }
+
+        .btn-djlq-over {
+            background-position: -526px -553px;
+            width: 211px;
+            height: 52px
+        }
+
+        .btn-djlq {
+            background-position: -526px -610px;
+            width: 211px;
+            height: 52px
+        }
+
+        .btn-djlq2-over {
+            background-position: -526px -715px;
+            width: 192px;
+            height: 43px
+        }
+
+        .btn-djlq2 {
+            background-position: -526px -667px;
+            width: 192px;
+            height: 43px
+        }
+
+        .btn-look1 {
+            background-position: -526px -496px;
+            width: 211px;
+            height: 52px
+        }
+
+        .btn-lot1 {
+            background-position: -526px -68px;
+            width: 259px;
+            height: 83px
+        }
+
+        .btn-lot2 {
+            background-position: -526px -156px;
+            width: 259px;
+            height: 83px
+        }
+
+        .nav1 {
+            background-position: -263px 0;
+            width: 258px;
+            height: 938px
+        }
+
+        .nav2 {
+            background-position: 0 0;
+            width: 258px;
+            height: 938px
+        }
+
+        .btn-zc1, .countdown-wrap, .countdown-wrap1, .goods-line, .goods-tit1, .goods-tit2, .half-item, .half-item1, .half-price1, .half-price2, .half-tips, .half1-1, .half1-2, .half2-1, .half2-2, .icon-half, .icon-huo, .icon-save1, .icon-save2, .logo-cf, .logo-cfhd, .nav1-bag-box, .nav2-bag-box, .part1 .gift-box .gift-item .bag-box .goods-tit > div::after, .part1 .gift-box .gift-item .goods-wrap::after, .part2 .half-wrap .half-item + .half-item, .part2 .tab-box .top-tab .text-wrap .tab2-text-act.on, .part2 .tab-box .top-tab .text-wrap .tab2-text.on, .prize-count1, .prize-count2, .spr_com_pc, .tab2-text, .tab2-text-act, .time0, .time1, .time2, .time3, .time4, .time5, .time6, .time7, .time8, .time9, .tit-bag1, .tit-bag2, .tit1, .tit2, .tit3, .tit4, .zc-item1, .zc-item2, .zc-tit1 {
+            background-image: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/spr_com_pc.png?2022_10_20_18_45_37);
+            background-size: 3096px 1875px;
+            background-repeat: no-repeat
+        }
+
+        .btn-zc1 {
+            background-position: -2175px -734px;
+            width: 211px;
+            height: 52px
+        }
+
+        .countdown-wrap {
+            background-position: -1894px -209px;
+            width: 220px;
+            height: 220px
+        }
+
+        .countdown-wrap1 {
+            background-position: -2119px -209px;
+            width: 220px;
+            height: 220px
+        }
+
+        .goods-line {
+            background-position: -2048px -640px;
+            width: 533px;
+            height: 34px
+        }
+
+        .goods-tit1 {
+            background-position: -2344px -209px;
+            width: 618px;
+            height: 70px
+        }
+
+        .goods-tit2 {
+            background-position: -2344px -284px;
+            width: 597px;
+            height: 70px
+        }
+
+        .half-item {
+            background-position: 0 -943px;
+            width: 570px;
+            height: 423px
+        }
+
+        .half-item1 {
+            background-position: -575px -943px;
+            width: 570px;
+            height: 423px
+        }
+
+        .half-price1 {
+            background-position: -2690px -434px;
+            width: 349px;
+            height: 55px
+        }
+
+        .half-price2 {
+            background-position: -2336px -434px;
+            width: 349px;
+            height: 55px
+        }
+
+        .half-tips {
+            background-position: -2048px -679px;
+            width: 354px;
+            height: 50px
+        }
+
+        .half1-1 {
+            background-position: -2048px -507px;
+            width: 192px;
+            height: 128px
+        }
+
+        .half1-2 {
+            background-position: -2245px -507px;
+            width: 192px;
+            height: 128px
+        }
+
+        .half2-1 {
+            background-position: -2639px -507px;
+            width: 192px;
+            height: 128px
+        }
+
+        .half2-2 {
+            background-position: -2442px -507px;
+            width: 192px;
+            height: 128px
+        }
+
+        .icon-half {
+            background-position: -2048px -734px;
+            width: 122px;
+            height: 130px
+        }
+
+        .icon-huo {
+            background-position: -536px -1371px;
+            width: 554px;
+            height: 264px
+        }
+
+        .icon-save1 {
+            background-position: -2786px -359px;
+            width: 177px;
+            height: 66px
+        }
+
+        .icon-save2 {
+            background-position: -2836px -507px;
+            width: 177px;
+            height: 66px
+        }
+
+        .logo-cf {
+            background-position: -2836px -578px;
+            width: 223px;
+            height: 51px
+        }
+
+        .logo-cfhd {
+            background-position: -2946px -284px;
+            width: 132px;
+            height: 45px
+        }
+
+        .nav1-bag-box {
+            background-position: 0 0;
+            width: 942px;
+            height: 938px
+        }
+
+        .nav2-bag-box {
+            background-position: -947px 0;
+            width: 942px;
+            height: 938px
+        }
+
+        .prize-count1 {
+            background-position: -1894px -434px;
+            width: 437px;
+            height: 68px
+        }
+
+        .prize-count2 {
+            background-position: -2344px -359px;
+            width: 437px;
+            height: 68px
+        }
+
+        .tab2-text-act {
+            background-position: -2407px -679px;
+            width: 132px;
+            height: 37px
+        }
+
+        .tab2-text {
+            background-position: -2586px -640px;
+            width: 130px;
+            height: 34px
+        }
+
+        .time0 {
+            background-position: -1951px -1045px;
+            width: 52px;
+            height: 78px
+        }
+
+        .time1 {
+            background-position: -2011px -882px;
+            width: 46px;
+            height: 76px
+        }
+
+        .time2 {
+            background-position: -1952px -963px;
+            width: 52px;
+            height: 77px
+        }
+
+        .time3 {
+            background-position: -1894px -1045px;
+            width: 52px;
+            height: 78px
+        }
+
+        .time4 {
+            background-position: -1894px -882px;
+            width: 56px;
+            height: 76px
+        }
+
+        .time5 {
+            background-position: -1894px -963px;
+            width: 53px;
+            height: 77px
+        }
+
+        .time6 {
+            background-position: -2008px -1045px;
+            width: 51px;
+            height: 78px
+        }
+
+        .time7 {
+            background-position: -1955px -882px;
+            width: 51px;
+            height: 76px
+        }
+
+        .time8 {
+            background-position: -2120px -1045px;
+            width: 50px;
+            height: 78px
+        }
+
+        .time9 {
+            background-position: -2064px -1045px;
+            width: 51px;
+            height: 78px
+        }
+
+        .tit-bag1 {
+            background-position: -1894px -507px;
+            width: 72px;
+            height: 370px
+        }
+
+        .tit-bag2 {
+            background-position: -1971px -507px;
+            width: 72px;
+            height: 370px
+        }
+
+        .tit1 {
+            background-position: 0 -1670px;
+            width: 1202px;
+            height: 100px
+        }
+
+        .tit2 {
+            background-position: -1894px 0;
+            width: 1202px;
+            height: 100px
+        }
+
+        .tit3 {
+            background-position: -1894px -105px;
+            width: 1202px;
+            height: 99px
+        }
+
+        .tit4 {
+            background-position: 0 -1775px;
+            width: 1202px;
+            height: 100px
+        }
+
+        .zc-item1 {
+            background-position: -1150px -943px;
+            width: 650px;
+            height: 294px
+        }
+
+        .zc-item2 {
+            background-position: 0 -1371px;
+            width: 531px;
+            height: 294px
+        }
+
+        .zc-tit1 {
+            background-position: -2967px -209px;
+            width: 123px;
+            height: 37px
+        }
+
+        .goods1-1, .goods1-2, .goods1-3, .goods1-4, .goods1-5, .goods1-6, .goods2-1, .goods2-2, .goods2-3, .goods2-4, .goods2-5, .goods2-6, .prize1-1, .prize1-10, .prize1-11, .prize1-2, .prize1-3, .prize1-4, .prize1-5, .prize1-6, .prize1-7, .prize1-8, .prize1-9, .prize2-1, .prize2-10, .prize2-2, .prize2-3, .prize2-4, .prize2-5, .prize2-6, .prize2-7, .prize2-8, .prize2-9, .spr_prop_pc, .zc-prize1, .zc-prize2 {
+            background-image: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/spr_prop_pc.png?2022_10_20_18_45_37);
+            background-size: 1357px 1046px;
+            background-repeat: no-repeat
+        }
+
+        .goods1-1 {
+            background-position: -432px -216px;
+            width: 212px;
+            height: 161px
+        }
+
+        .goods1-2 {
+            background-position: 0 -388px;
+            width: 212px;
+            height: 161px
+        }
+
+        .goods1-3 {
+            background-position: -648px -720px;
+            width: 211px;
+            height: 161px
+        }
+
+        .goods1-4 {
+            background-position: -648px -554px;
+            width: 211px;
+            height: 161px
+        }
+
+        .goods1-5 {
+            background-position: -432px -720px;
+            width: 211px;
+            height: 161px
+        }
+
+        .goods1-6 {
+            background-position: 0 -554px;
+            width: 211px;
+            height: 161px
+        }
+
+        .goods2-1 {
+            background-position: -217px -388px;
+            width: 212px;
+            height: 161px
+        }
+
+        .goods2-2 {
+            background-position: -434px -388px;
+            width: 212px;
+            height: 161px
+        }
+
+        .goods2-3 {
+            background-position: -216px -554px;
+            width: 211px;
+            height: 161px
+        }
+
+        .goods2-4 {
+            background-position: -712px -332px;
+            width: 211px;
+            height: 161px
+        }
+
+        .goods2-5 {
+            background-position: -712px 0;
+            width: 212px;
+            height: 161px
+        }
+
+        .goods2-6 {
+            background-position: 0 -720px;
+            width: 211px;
+            height: 161px
+        }
+
+        .prize1-1 {
+            background-position: -929px -495px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-10 {
+            background-position: -929px -660px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-11 {
+            background-position: 0 -886px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-2 {
+            background-position: -216px -886px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-3 {
+            background-position: -648px -886px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-4 {
+            background-position: -864px -886px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-5 {
+            background-position: -1146px -330px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-6 {
+            background-position: -1146px -495px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-7 {
+            background-position: -1146px -660px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-8 {
+            background-position: -929px -330px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize1-9 {
+            background-position: -1146px -825px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize2-1 {
+            background-position: -432px -554px;
+            width: 211px;
+            height: 161px
+        }
+
+        .prize2-10 {
+            background-position: -929px 0;
+            width: 212px;
+            height: 160px
+        }
+
+        .prize2-2 {
+            background-position: -712px -166px;
+            width: 211px;
+            height: 161px
+        }
+
+        .prize2-3 {
+            background-position: -432px -886px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize2-4 {
+            background-position: -216px -720px;
+            width: 211px;
+            height: 161px
+        }
+
+        .prize2-5 {
+            background-position: -216px -216px;
+            width: 211px;
+            height: 164px
+        }
+
+        .prize2-6 {
+            background-position: -1146px 0;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize2-7 {
+            background-position: -1146px -165px;
+            width: 211px;
+            height: 160px
+        }
+
+        .prize2-8 {
+            background-position: 0 -216px;
+            width: 211px;
+            height: 167px
+        }
+
+        .prize2-9 {
+            background-position: -929px -165px;
+            width: 212px;
+            height: 160px
+        }
+
+        .zc-prize1 {
+            background-position: -356px 0;
+            width: 351px;
+            height: 211px
+        }
+
+        .zc-prize2 {
+            background-position: 0 0;
+            width: 351px;
+            height: 211px
+        }
+
+        .dia-bg1, .dia-bg2, .dia-bg3, .dia-close, .dia-fjb-bg, .dia-fjb-tit, .dia-hj, .dia-probability-box2, .dia-prop1-1, .dia-prop1-10, .dia-prop1-11, .dia-prop1-12, .dia-prop1-13, .dia-prop1-14, .dia-prop1-2, .dia-prop1-3, .dia-prop1-4, .dia-prop1-5, .dia-prop1-6, .dia-prop1-7, .dia-prop1-8, .dia-prop1-9, .dia-prop2-1, .dia-prop2-10, .dia-prop2-11, .dia-prop2-12, .dia-prop2-13, .dia-prop2-14, .dia-prop2-15, .dia-prop2-16, .dia-prop2-2, .dia-prop2-3, .dia-prop2-4, .dia-prop2-5, .dia-prop2-6, .dia-prop2-7, .dia-prop2-8, .dia-prop2-9, .dia-tab1, .dia-tab1-act, .dia-tab2, .dia-tab2-act, .dia-tab2-gl-close, .dia-tit-cj, .dia-zcx-bg, .dia-zcx-tit, .lot1 .dia-gxn-box, .lot1-btn-one, .lot1-btn-ten, .lot1-gnx-bg, .lot1-gnx-bg2, .lot1-gxn-tit, .lot18 .dia-probability-box2 .dia-probability-top .dia-tab1.on, .lot18 .dia-probability-box2 .dia-probability-top .dia-tab2.on, .lot2 .dia-gxn-box, .pop-ycj, .pop-ycj .pop-close, .pop-ycj p, .popbtn, .spr_dia_pc {
+            background-image: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/spr_dia_pc.png?2022_10_20_18_45_37);
+            background-size: 2827px 1943px;
+            background-repeat: no-repeat
+        }
+
+        .dia-bg1 {
+            background-position: 0 0;
+            width: 1201px;
+            height: 724px
+        }
+
+        .dia-bg2 {
+            background-position: 0 -729px;
+            width: 708px;
+            height: 688px
+        }
+
+        .dia-bg3 {
+            background-position: -1518px -729px;
+            width: 690px;
+            height: 325px
+        }
+
+        .dia-close {
+            background-position: -2803px -551px;
+            width: 19px;
+            height: 20px
+        }
+
+        .dia-fjb-bg {
+            background-position: -617px -1422px;
+            width: 457px;
+            height: 521px
+        }
+
+        .dia-fjb-tit {
+            background-position: -2371px -1906px;
+            width: 265px;
+            height: 33px
+        }
+
+        .dia-hj {
+            background-position: -943px -1336px;
+            width: 213px;
+            height: 34px
+        }
+
+        .dia-probability-box2 {
+            background-position: -2371px 0;
+            width: 456px;
+            height: 546px
+        }
+
+        .dia-prop1-1 {
+            background-position: -2567px -704px;
+            width: 191px;
+            height: 146px
+        }
+
+        .dia-prop1-10 {
+            background-position: -2371px -1006px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop1-11 {
+            background-position: -1469px -1422px;
+            width: 190px;
+            height: 145px
+        }
+
+        .dia-prop1-12 {
+            background-position: -2371px -1156px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop1-13 {
+            background-position: -2567px -1306px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop1-14 {
+            background-position: -2567px -1756px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop1-2 {
+            background-position: -1274px -1422px;
+            width: 190px;
+            height: 145px
+        }
+
+        .dia-prop1-3 {
+            background-position: -2567px -551px;
+            width: 191px;
+            height: 146px
+        }
+
+        .dia-prop1-4 {
+            background-position: -2371px -704px;
+            width: 191px;
+            height: 146px
+        }
+
+        .dia-prop1-5 {
+            background-position: -2371px -551px;
+            width: 191px;
+            height: 148px
+        }
+
+        .dia-prop1-6 {
+            background-position: -2567px -1156px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop1-7 {
+            background-position: -2371px -1306px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop1-8 {
+            background-position: -2371px -855px;
+            width: 190px;
+            height: 146px
+        }
+
+        .dia-prop1-9 {
+            background-position: -2371px -1456px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-1 {
+            background-position: -1079px -1422px;
+            width: 190px;
+            height: 145px
+        }
+
+        .dia-prop2-10 {
+            background-position: -2371px -1606px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-11 {
+            background-position: -2083px -1186px;
+            width: 190px;
+            height: 145px
+        }
+
+        .dia-prop2-12 {
+            background-position: -2371px -1756px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-13 {
+            background-position: -2567px -1006px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-14 {
+            background-position: -713px -1186px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-15 {
+            background-position: -909px -1186px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-16 {
+            background-position: -1693px -1186px;
+            width: 190px;
+            height: 145px
+        }
+
+        .dia-prop2-2 {
+            background-position: -1301px -1186px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-3 {
+            background-position: -1497px -1186px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-4 {
+            background-position: -1105px -1186px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-5 {
+            background-position: -1664px -1422px;
+            width: 190px;
+            height: 145px
+        }
+
+        .dia-prop2-6 {
+            background-position: -1888px -1186px;
+            width: 190px;
+            height: 145px
+        }
+
+        .dia-prop2-7 {
+            background-position: -2567px -1606px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-8 {
+            background-position: -2567px -1456px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-prop2-9 {
+            background-position: -2566px -855px;
+            width: 191px;
+            height: 145px
+        }
+
+        .dia-tab1-act {
+            background-position: -713px -1336px;
+            width: 225px;
+            height: 52px
+        }
+
+        .dia-tab1 {
+            background-position: -1980px -1124px;
+            width: 225px;
+            height: 52px
+        }
+
+        .dia-tab2-act {
+            background-position: -1518px -1124px;
+            width: 226px;
+            height: 52px
+        }
+
+        .dia-tab2-gl-close {
+            background-position: -2763px -551px;
+            width: 35px;
+            height: 36px
+        }
+
+        .dia-tab2 {
+            background-position: -1749px -1124px;
+            width: 226px;
+            height: 52px
+        }
+
+        .dia-tit-cj {
+            background-position: -1794px -660px;
+            width: 465px;
+            height: 48px
+        }
+
+        .dia-zcx-bg {
+            background-position: 0 -1422px;
+            width: 612px;
+            height: 521px
+        }
+
+        .dia-zcx-tit {
+            background-position: -1161px -1336px;
+            width: 189px;
+            height: 34px
+        }
+
+        .lot1-btn-one {
+            background-position: -1964px -1059px;
+            width: 218px;
+            height: 60px
+        }
+
+        .lot1-btn-ten {
+            background-position: -1741px -1059px;
+            width: 218px;
+            height: 60px
+        }
+
+        .lot1-gnx-bg, .lot2 .dia-gxn-box {
+            background-position: -1206px 0;
+            width: 1160px;
+            height: 655px
+        }
+
+        .lot1 .dia-gxn-box, .lot1-gnx-bg2 {
+            background-position: -713px -729px;
+            width: 800px;
+            height: 452px
+        }
+
+        .lot1-gxn-tit {
+            background-position: -1206px -660px;
+            width: 583px;
+            height: 53px
+        }
+
+        .popbtn {
+            background-position: -1518px -1059px;
+            width: 218px;
+            height: 60px
+        }
+
+        article, body, dd, dl, footer, form, h1, h2, h3, h4, h5, h6, header, ol, p, section, ul {
+            margin: 0
+        }
+
+        body, button, input, select, textarea {
+            font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%
+        }
+
+        b, em {
+            font-style: normal
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        img {
+            border: 0
+        }
+
+        body {
+            padding-top: 42px
+        }
+
+        button, input, select, textarea {
+            font-size: 100%;
+            outline: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        ol, td, th, ul {
+            padding: 0;
+            list-style: none
+        }
+
+        .gray {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: gray;
+            pointer-events: none
+        }
+
+        a:not(.gray):hover {
+            -webkit-filter: brightness(1.2);
+            filter: brightness(1.2)
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0
+        }
+
+        .clearfix {
+            *zoom: 1
+        }
+
+        /*!! 通用底部样式*/
+        #afooter {
+            background: #1c1c1c;
+            text-align: center
+        }
+
+        #afooter .wrap_ieg {
+            width: 1240px;
+            margin: 0 auto;
+            padding: 30px 0
+        }
+
+        #afooter p {
+            color: #6e6e6e;
+            line-height: 24px;
+            font-size: 10px
+        }
+
+        #afooter a {
+            color: #6e6e6e;
+            font-size: 12px
+        }
+
+        /*!! asyncCookie的iframe样式*/
+        #loginStatusSyncFrame_ams_ame {
+            display: block
+        }
+
+        body {
+            background-color: #222325
+        }
+
+        #_overlay_, #actTitleWrap, .ost, .ost_box, body {
+            min-width: 1200px !important
+        }
+
+        .nq {
+            padding: 0
+        }
+
+        .nq .g-wrap {
+            width: 1240px;
+            margin: 0 auto
+        }
+
+        .nq .banner {
+            display: none
+        }
+
+        .nq .login-wrap {
+            position: static;
+            width: 100%;
+            text-align: center;
+            color: #96856c;
+            font-size: 18px;
+            white-space: nowrap;
+            padding: 40px 0;
+            line-height: 1.4
+        }
+
+        .nq .login-wrap a {
+            color: #96856c
+        }
+
+        @media screen and (max-width: 1240px) {
+            .nq .g-wrap {
+                min-width: 1200px
+            }
+        }
+
+        .g-wrap {
+            overflow: hidden;
+            position: relative;
+            font-family: '\5FAE\8F6F\96C5\9ED1'
+        }
+
+        .g-wrap.cfhd .banner {
+            height: 1080px;
+            background: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/pc/banner2.jpg) no-repeat center top
+        }
+
+        .g-wrap.cfhd .banner .cf {
+            display: none !important
+        }
+
+        .g-wrap.cfhd .banner .cfhd {
+            display: inline !important
+        }
+
+        .g-wrap.cf .banner {
+            height: 1080px;
+            background: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/pc/banner.jpg) no-repeat center top
+        }
+
+        .g-wrap.cf .banner .cf {
+            display: inline !important
+        }
+
+        .g-wrap.cf .banner .cfhd {
+            display: none !important
+        }
+
+        .g-wrap a {
+            -webkit-transition: filter .3s, border .3s, color .3s;
+            transition: filter .3s, border .3s, color .3s
+        }
+
+        .g-wrap a:hover {
+            text-decoration: none;
+            -webkit-filter: brightness(1.2);
+            filter: brightness(1.2)
+        }
+
+        .g-wrap .login-wrap {
+            position: static;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            white-space: nowrap;
+            padding: 40px 0;
+            line-height: 1.4
+        }
+
+        .g-wrap .login-wrap a {
+            color: #fff
+        }
+
+        .banner {
+            height: 1080px;
+            background: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/pc/banner.jpg) no-repeat center top
+        }
+
+        .banner .header-video {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -960px;
+            z-index: 3
+        }
+
+        .banner .cf {
+            display: inline
+        }
+
+        .banner .cfhd {
+            display: none
+        }
+
+        .logo-wrap {
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            font-size: 0;
+            z-index: 4
+        }
+
+        .logo-wrap a {
+            display: inline-block;
+            vertical-align: middle
+        }
+
+        .logo-wrap .logo-cfhd {
+            margin-left: 30px
+        }
+
+        @keyframes breath {
+            0% {
+                transform: scale(1)
+            }
+            50% {
+                transform: scale(1.2)
+            }
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        @keyframes breath1 {
+            0% {
+                transform: scale(.9)
+            }
+            50% {
+                transform: scale(1.1)
+            }
+            100% {
+                transform: scale(.9)
+            }
+        }
+
+        .countdown-wrap {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            margin-top: -150px;
+            padding: 40px 20px 0;
+            box-sizing: border-box;
+            z-index: 5;
+            font-size: 0;
+            text-align: center
+        }
+
+        .countdown-wrap .countdown-text {
+            font-size: 18px;
+            color: #b79158
+        }
+
+        .countdown-wrap .num {
+            margin-top: 30px
+        }
+
+        .countdown-wrap span {
+            display: inline-block;
+            vertical-align: bottom
+        }
+
+        .countdown-wrap i {
+            display: inline-block;
+            vertical-align: bottom
+        }
+
+        .countdown-wrap em {
+            display: inline-block;
+            vertical-align: bottom;
+            font-size: 40px;
+            color: #b79158;
+            line-height: 50px;
+            margin-left: 10px
+        }
+
+        .main {
+            background: url(//game.gtimg.cn/images/actdaoju/act/a20220916store/pc/main.jpg) no-repeat center top
+        }
+
+        .part {
+            width: 1200px;
+            margin: 0 auto
+        }
+
+        .part .tit {
+            margin: 0 auto
+        }
+
+        .part .intro {
+            font-size: 18px;
+            color: #96856c
+        }
+
+        .part .part-intro {
+            font-size: 18px;
+            color: #96856c;
+            text-align: center
+        }
+
+        .part1 {
+            margin-top: 30px
+        }
+
+        .part1 .intro {
+            font-size: 18px;
+            color: #96856c
+        }
+
+        .part1 .gift-box {
+            margin-top: 30px;
+            font-size: 0
+        }
+
+        .part1 .gift-box .gift-item {
+            display: inline-block;
+            vertical-align: top;
+            width: 258px;
+            transition: all .3s
+        }
+
+        .part1 .gift-box .gift-item.on {
+            width: 942px
+        }
+
+        .part1 .gift-box .gift-item.on .nav {
+            display: none
+        }
+
+        .part1 .gift-box .gift-item.on .bag-box {
+            display: inline-block
+        }
+
+        .part1 .gift-box .gift-item .nav {
+            display: inline-block;
+            padding-top: 136px;
+            box-sizing: border-box
+        }
+
+        .part1 .gift-box .gift-item .nav .gift-price i {
+            display: block;
+            margin: 0 auto
+        }
+
+        .part1 .gift-box .gift-item .nav .gift-price .icon-save {
+            margin-top: 30px;
+            animation: breath 1.5s infinite ease forwards
+        }
+
+        .part1 .gift-box .gift-item .nav .btn {
+            display: block;
+            margin: 150px auto 0
+        }
+
+        .part1 .gift-box .gift-item .bag-box {
+            display: none;
+            position: relative
+        }
+
+        .part1 .gift-box .gift-item .bag-box .goods-tit {
+            margin: 0 auto;
+            padding: 21px 0
+        }
+
+        .part1 .gift-box .gift-item .bag-box .goods-tit > div {
+            position: relative;
+            margin: 0 auto
+        }
+
+        .part1 .gift-box .gift-item .bag-box .goods-tit > div::after {
+            background-position: -2048px -640px;
+            width: 533px;
+            height: 34px;
+            content: '';
+            position: absolute;
+            left: -58px;
+            bottom: -12px
+        }
+
+        .part1 .gift-box .gift-item .goods-wrap {
+            position: relative;
+            margin-top: -10px;
+            font-size: 0;
+            text-align: center
+        }
+
+        .part1 .gift-box .gift-item .goods-wrap::after {
+            content: '';
+            background-position: -536px -1371px;
+            width: 554px;
+            height: 264px;
+            position: absolute;
+            left: 39px;
+            top: 37px;
+            pointer-events: none
+        }
+
+        .part1 .gift-box .gift-item .goods-wrap .goods-item {
+            display: inline-block;
+            vertical-align: top;
+            margin: 60px 50px 0
+        }
+
+        .part1 .gift-box .gift-item .goods-wrap .goods-item .goods {
+            margin: 0 auto
+        }
+
+        .part1 .gift-box .gift-item .goods-wrap .goods-item .btn-djlq {
+            display: block;
+            margin: 10px auto 0
+        }
+
+        .part1 .gift-box .gift-item .goods-wrap .goods-item .btn-djlq.over {
+            background-position: -526px -553px;
+            width: 211px;
+            height: 52px
+        }
+
+        .part1 .gift-box .gift-item .prize-count {
+            margin: 60px auto 0
+        }
+
+        .part1 .gift-box .gift-item .btn-djgm1 {
+            display: block;
+            margin: 20px auto 0
+        }
+
+        .part1 .gift-box .gift-item .btn-djgm1.over {
+            background-position: -526px -244px;
+            width: 263px;
+            height: 64px
+        }
+
+        .part2 {
+            margin-top: 130px
+        }
+
+        .part2 .have-money {
+            margin: 30px auto 0;
+            font-size: 18px;
+            color: #ba9764;
+            text-align: center
+        }
+
+        .part2 .have-money span {
+            color: #ead5a3
+        }
+
+        .part2 .half-wrap {
+            margin-top: 55px;
+            font-size: 0
+        }
+
+        .part2 .half-wrap .half-item {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 36px;
+            box-sizing: border-box
+        }
+
+        .part2 .half-wrap .half-item + .half-item {
+            margin-left: 60px;
+            background-position: -575px -943px;
+            width: 570px;
+            height: 423px
+        }
+
+        .part2 .half-wrap .half-item .icon-half {
+            position: absolute;
+            right: -35px;
+            top: -60px
+        }
+
+        .part2 .half-wrap .half-tips {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -25px;
+            font-size: 22px;
+            color: #e4c781;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .part2 .half-wrap .half-tips span {
+            color: #cb4947
+        }
+
+        .part2 .half-wrap .half-box-wrap {
+            font-size: 0;
+            text-align: center
+        }
+
+        .part2 .half-wrap .half-box {
+            display: inline-block;
+            vertical-align: top
+        }
+
+        .part2 .half-wrap .half-box + .half-box {
+            margin-left: 80px
+        }
+
+        .part2 .half-wrap .half {
+            margin: 0 auto
+        }
+
+        .part2 .half-wrap .btn-djlq2 {
+            display: block;
+            margin: 10px auto 0
+        }
+
+        .part2 .half-wrap .btn-djlq2.over {
+            background-position: -526px -715px;
+            width: 192px;
+            height: 43px
+        }
+
+        .part2 .half-wrap .half-price {
+            margin: 25px auto 0
+        }
+
+        .part2 .half-wrap .btn-djgm2 {
+            display: block;
+            margin: 15px auto 0;
+            padding-top: 36px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #d1c086;
+            text-align: center
+        }
+
+        .part2 .half-wrap .half-text {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #96856c;
+            text-align: center
+        }
+
+        .part2 .tab-box {
+            margin-top: 45px
+        }
+
+        .part2 .tab-box .top-tab {
+            position: relative;
+            width: 1200px;
+            height: 75px
+        }
+
+        .part2 .tab-box .top-tab .text-wrap {
+            width: 600px;
+            height: 75px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 20px 0;
+            box-sizing: border-box;
+            pointer-events: none
+        }
+
+        .part2 .tab-box .top-tab .text-wrap .tab2-text, .part2 .tab-box .top-tab .text-wrap .tab2-text-act {
+            margin: 0 auto;
+            animation: breath1 1.5s infinite ease forwards
+        }
+
+        .part2 .tab-box .top-tab .text-wrap .tab2-text-act.on, .part2 .tab-box .top-tab .text-wrap .tab2-text.on {
+            background-position: -2407px -679px;
+            width: 132px;
+            height: 37px
+        }
+
+        .part2 .tab-box .top-tab .nav-img {
+            width: 1200px;
+            height: 75px
+        }
+
+        .part2 .tab-box .tab-con {
+            position: relative;
+            margin-top: -4px
+        }
+
+        .part2 .tab-box .tab-con .btn-hj {
+            font-size: 18px;
+            color: #e3c990;
+            font-weight: 400;
+            text-decoration: underline
+        }
+
+        .part2 .tab-box .tab-con.tab-con1 .btn-wrap {
+            top: 320px
+        }
+
+        .part2 .tab-box .tab-con.tab-con1 .zc-box .zc-item.zc-item1 {
+            padding: 30px 0 0 256px
+        }
+
+        .part2 .tab-box .tab-con.tab-con1 .zc-box .zc-item .zc-prize1 {
+            left: -50px
+        }
+
+        .part2 .tab-box .tab-con.tab-con2 .btn-wrap {
+            top: 226px
+        }
+
+        .part2 .tab-box .tab-con.tab-con2 .btn-wrap p {
+            margin-top: 0;
+            margin-bottom: 10px
+        }
+
+        .part2 .tab-box .tab-con img {
+            width: 1200px;
+            height: 765px
+        }
+
+        .part2 .tab-box .tab-con .btn-wrap {
+            position: absolute;
+            left: 0;
+            right: 0;
+            font-size: 0;
+            text-align: center
+        }
+
+        .part2 .tab-box .tab-con .btn-wrap a {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 22px
+        }
+
+        .part2 .tab-box .tab-con .btn-wrap p {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #ba9764
+        }
+
+        .part2 .tab-box .tab-con .btn-wrap p span {
+            color: #ead5a3
+        }
+
+        .zc-box {
+            margin-top: 30px;
+            font-size: 0
+        }
+
+        .zc-box .zc-item {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box
+        }
+
+        .zc-box .zc-item + .zc-item {
+            margin-left: 18px
+        }
+
+        .zc-box .zc-item.zc-item1 {
+            padding: 72px 0 0 320px
+        }
+
+        .zc-box .zc-item.zc-item2 {
+            padding: 30px 20px
+        }
+
+        .zc-box .zc-item .zc-prize {
+            position: absolute;
+            bottom: 46px;
+            left: -5px
+        }
+
+        .zc-box .zc-item .zc-tit1 {
+            margin: 0 auto
+        }
+
+        .zc-box .zc-item .zc-intro {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #96856c
+        }
+
+        .zc-box .zc-item .btn {
+            display: block;
+            margin: 40px auto 0
+        }
+
+        .zc-box .zc-item ul {
+            text-align: center
+        }
+
+        .zc-box .zc-item ul li {
+            font-size: 18px;
+            color: #e4c781
+        }
+
+        .part3 {
+            margin-top: 130px
+        }
+
+        .part3 .player-jf {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ba9764;
+            text-align: center
+        }
+
+        .part3 .player-jf span {
+            color: #ead5a3
+        }
+
+        .part3 .prize-wrap {
+            font-size: 0;
+            text-align: center
+        }
+
+        .part3 .prize-wrap .prize-item {
+            display: inline-block;
+            vertical-align: top;
+            margin: 20px 12px 0
+        }
+
+        .part3 .prize-wrap .prize-item .prize {
+            margin: 10px auto 0
+        }
+
+        .part3 .prize-wrap .prize-item span {
+            font-size: 20px;
+            color: #e0c999
+        }
+
+        .part3 .prize-wrap .prize-item a {
+            display: block;
+            margin: 5px auto 0
+        }
+
+        .part3 .prize-wrap .prize-item .btn-djdh1.over {
+            background-position: -526px -439px;
+            width: 211px;
+            height: 52px
+        }
+
+        .part4 {
+            margin-top: 80px;
+            padding-bottom: 150px
+        }
+
+        .part4 .rules-wrap {
+            width: 1200px;
+            margin: 20px auto 0
+        }
+
+        .part4 .rules-wrap .rules-item {
+            font-size: 0;
+            text-align: left
+        }
+
+        .part4 .rules-wrap .rules-item span {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 20px;
+            color: #e4c781
+        }
+
+        .part4 .rules-wrap .rules-item .rules-num {
+            width: 28px
+        }
+
+        .part4 .rules-wrap .rules-item .rules-con {
+            width: 1170px
+        }
+
+        .part4 .rules-wrap .rules-item a {
+            font-size: 22px;
+            color: #e65b56;
+            font-weight: 700
+        }
+
+        .dia ::-webkit-scrollbar {
+            width: 4px
+        }
+
+        .dia ::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: #1c1616
+        }
+
+        .dia ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(168, 141, 89, .5)
+        }
+
+        .dia-zc-wrap {
+            position: relative
+        }
+
+        .dia-zc-wrap .dia-zc-box {
+            padding: 36px 46px 0;
+            box-sizing: border-box
+        }
+
+        .dia-zc-wrap .dia-zc-box .content-box > div {
+            display: inline-block;
+            vertical-align: middle
+        }
+
+        .dia-zc-wrap .dia-zc-box .tit {
+            margin: 0 auto
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .zcx-now-jf {
+            font-size: 18px;
+            color: #c6ac85;
+            text-align: center
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .dia-zcx-bg {
+            margin-top: 20px;
+            overflow: hidden;
+            padding-right: 5px;
+            box-sizing: border-box
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .dia-zcx-bg table {
+            height: 506px;
+            width: 613px;
+            overflow: hidden;
+            box-sizing: border-box
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .dia-zcx-bg table thead th {
+            font-size: 22px;
+            color: #e4c781;
+            font-weight: 700;
+            width: 33.33%;
+            height: 55px;
+            line-height: 55px
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .dia-zcx-bg table tbody {
+            text-align: center;
+            width: 100%;
+            margin-top: 14px;
+            box-sizing: border-box
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .dia-zcx-bg table tbody td {
+            width: 33.33%;
+            font-size: 18px;
+            color: #fff;
+            margin-top: 20px
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .dia-zcx-bg table tbody td a {
+            margin: 0 auto 0;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 5px
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .bxfy {
+            font-size: 0;
+            text-align: center;
+            position: relative
+        }
+
+        .dia-zc-wrap .dia-zc-box .zcx-box .bxfy a, .dia-zc-wrap .dia-zc-box .zcx-box .bxfy span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            color: #e4c781;
+            margin: 6px 10px 0
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box {
+            margin-left: 34px
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg {
+            margin-top: 20px;
+            overflow: hidden;
+            padding-right: 5px;
+            padding-top: 10px;
+            box-sizing: border-box
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg .dia-fjb-head {
+            width: 100%;
+            font-size: 0;
+            text-align: center
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg .dia-fjb-head span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+            font-size: 22px;
+            color: #e4c781;
+            font-weight: 700
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul {
+            width: 100%;
+            max-height: 415px;
+            overflow-y: auto;
+            margin-top: 36px;
+            box-sizing: border-box
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul li {
+            font-size: 0
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul li + li {
+            margin-top: 20px
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul li > a, .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul li > span {
+            font-size: 20px;
+            color: #e4c781;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul li > span:nth-child(1) {
+            width: 256px
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul li > span:nth-child(2) {
+            width: 170px;
+            margin-left: 10px
+        }
+
+        .dia-zc-wrap .dia-zc-box .fjb-box .dia-fjb-bg ul li > a + a {
+            margin-left: 20px
+        }
+
+        .dia-zc-wrap .dia-close {
+            position: absolute;
+            right: 45px;
+            top: 29px
+        }
+
+        .lot1, .lot2 {
+            position: relative;
+            border: none
+        }
+
+        .lot1 .dia-gxn-box, .lot2 .dia-gxn-box {
+            box-sizing: border-box
+        }
+
+        .lot1 .dia-gxn-box .lot1-gxn-tit, .lot2 .dia-gxn-box .lot1-gxn-tit {
+            display: block;
+            margin: 0 auto 0
+        }
+
+        .lot1 .dia-gxn-box .lot1-gnx-box, .lot2 .dia-gxn-box .lot1-gnx-box {
+            font-size: 0;
+            text-align: center;
+            margin-top: 32px
+        }
+
+        .lot1 .dia-gxn-box .lot1-gnx-box .lot1-prop, .lot2 .dia-gxn-box .lot1-gnx-box .lot1-prop {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 15px 15px
+        }
+
+        .lot1 .dia-gxn-box .lot1-gnx-btn-box, .lot2 .dia-gxn-box .lot1-gnx-btn-box {
+            font-size: 0;
+            text-align: center
+        }
+
+        .lot1 .dia-gxn-box .lot1-gnx-btn-box a, .lot2 .dia-gxn-box .lot1-gnx-btn-box a {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 65px
+        }
+
+        .lot1 .dia-gxn-box {
+            padding-top: 40px
+        }
+
+        .lot1 .dia-gxn-box .lot1-gnx-box {
+            margin-top: 52px
+        }
+
+        .lot1 .lot1-gnx-btn-box {
+            margin-top: 24px
+        }
+
+        .lot1 .dia-close {
+            position: absolute;
+            right: 46px;
+            top: 42px
+        }
+
+        .lot2 .dia-gxn-box {
+            padding-top: 56px
+        }
+
+        .lot2 .dia-gxn-box .lot1-gnx-box {
+            margin: 50px auto 0
+        }
+
+        .lot2 .lot1-gnx-btn-box {
+            margin-top: 40px
+        }
+
+        .lot2 .dia-close {
+            position: absolute;
+            right: 58px;
+            top: 50px
+        }
+
+        .lot18 {
+            position: relative
+        }
+
+        .lot18 .dia-probability-box2 {
+            box-sizing: border-box;
+            padding-top: 2px
+        }
+
+        .lot18 .dia-probability-box2 .dia-probability-top {
+            text-align: center;
+            font-size: 0
+        }
+
+        .lot18 .dia-probability-box2 .dia-probability-top a {
+            display: inline-block;
+            vertical-align: middle
+        }
+
+        .lot18 .dia-probability-box2 .dia-probability-top .dia-tab1.on {
+            background-position: -713px -1336px;
+            width: 225px;
+            height: 52px
+        }
+
+        .lot18 .dia-probability-box2 .dia-probability-top .dia-tab2.on {
+            background-position: -1518px -1124px;
+            width: 226px;
+            height: 52px
+        }
+
+        .lot18 .dia-probability-box2 .probability-con2 {
+            padding: 0 4px;
+            width: 100%;
+            text-align: center
+        }
+
+        .lot18 .dia-probability-box2 .probability-con2 tr td:first-child {
+            width: 335px
+        }
+
+        .lot18 .dia-probability-box2 .probability-con2 tr td:last-child {
+            width: 122px
+        }
+
+        .lot18 .dia-probability-box2 .probability-con2 thead td {
+            font-size: 18px;
+            color: #e4c781;
+            height: 40px;
+            line-height: 40px
+        }
+
+        .lot18 .dia-probability-box2 .probability-con2 tbody td {
+            height: 27px;
+            line-height: 27px;
+            font-size: 18px;
+            color: #e4c781;
+            border-top: 1px solid #5f4927
+        }
+
+        .lot18 .dia-tab2-gl-close {
+            position: absolute;
+            top: -40px;
+            right: 12px
+        }
+
+        .dia-bg2 {
+            padding: 40px 0 0 !important;
+            text-align: center
+        }
+
+        .pop-ycj {
+            background-position: -1518px -729px;
+            width: 690px;
+            height: 325px;
+            padding: 50px 0 0;
+            box-sizing: border-box
+        }
+
+        .pop-ycj p {
+            background-position: -1794px -660px;
+            width: 465px;
+            height: 48px;
+            font-weight: 700;
+            margin: 0 auto
+        }
+
+        .pop-ycj .pop-close {
+            background-position: -2803px -551px;
+            width: 19px;
+            height: 20px;
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 0
+        }
+
+        .pop-ycj input {
+            display: block;
+            width: 348px;
+            height: 50px;
+            margin: 40px auto 0;
+            border: 1px solid #6c4c1d;
+            background-color: transparent;
+            outline: 0;
+            border-radius: 5px;
+            color: #f9f2c8
+        }
+
+        .pop-ycj .popbtn {
+            margin: 40px auto 0;
+            display: block;
+            text-align: center;
+            font-size: 0
+        }
+
+        /*!# sourceMappingURL=comm.css.map */
+
+    </style>
+</head>
+<body>
+<div style="font-size: 22px;color: #e4c781;font-weight: 700;">
+    <p style="text-align: center">此页面只是为了测试概率,抽到的道具不会发送游戏仓库</p>
+    <p style="text-align: center">任何拿以此页面盈利的行为,均与作者无关</p>
+    <p style="text-align: center">如有侵权请联系作者QQ:1839327863(发送邮件或者加好友备注)</p>
+</div>
+<div class="part part2" id="app" @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
+    <div class="half-wrap" style="display: table;margin: auto;">
+        <a @click="cjjAdd(1);czjlAdd(10)" class="btn-djgm2"
+           style="display: inline-block;margin: 0px 30px;user-select:none;text-decoration: none;">附赠1张HD抽奖券</a>
+        <a @click="cjjAdd(11);czjlAdd(100)" class="btn-djgm2"
+           style="display: inline-block;margin: 0px 30px;user-select:none;text-decoration: none;">附赠11张HD抽奖券</a>
+        <p class="half-text">累计充值 <span class="cfhdChongzhi" style="color: red">{{cfhd_czjl}}</span> 元</p>
+    </div>
+    <div class="tab-box">
+        <!-- CFHD -->
+        <div class="tab-con tab-con2" data-tabc="2" style="display: block;">
+            <div class="lottery">
+                <img src="//game.gtimg.cn/images/actdaoju/act/a20220916store/pc/lottery2.png" alt="">
+                <div class="btn-wrap">
+                    <p>您当前有: <span class="cfhdChou">{{cfhd_cjj}}</span> 张HD抽奖券 </p>
+                    <a @click="SendClick(1)" class="btn-lot1"></a>
+                    <a @click="SendClick(10)" class="btn-lot2"></a>
+                </div>
+            </div>
+
+            <div class="dia dia-zc-wrap" id="showMyGiftContent_892737z" style="outline: none;margin-top: 30px">
+                <!-- cfhd暂存箱 -->
+                <div class="dia-zc-box dia-bg1">
+                    <div class="content-box">
+                        <div class="zcx-box">
+                            <p class="zcx-now-jf">您当前的抽奖券：<span
+                                    class="zcx-now-jf-text my-jifen cfhdChou">{{cfhd_cjj}}</span></p>
+                            <div class="dia-zcx-tit tit"></div>
+                            <div class="dia-zcx-bg">
+                                <table class="tab table_bor">
+                                    <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>领取道具</th>
+                                        <th>抽奖券</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="getGiftContent_892737z">
+                                    <tr v-for="(item,index) in cfhd_zcx" v-if="cfhd_zcx.length>0">
+                                        <template v-if="index>=cfhd_zcx_page.pageStart&&index<=cfhd_zcx_page.pageEnd">
+                                            <td>{{item.Name}}</td>
+                                            <td v-if="item.iStatus==3">
+                                                <a @click="item.iStatus=1;item.sExtend2=1"
+                                                   style="background-color:red;color:#fff;user-select:none;text-decoration: none;">[发送仓库]</a>
+                                            </td>
+                                            <td v-if="item.iStatus==3">
+                                                <a @click="item.iStatus=1;item.sExtend2=2;cjjAdd(item.Keynum)"
+                                                   style="background-color:red;color:#fff;user-select:none;text-decoration: none;">[分解]</a>
+                                            </td>
+                                            <td v-if="item.sExtend2==1">已发送</td>
+                                            <td v-if="item.sExtend2==1">x</td>
+                                            <td v-if="item.sExtend2==2">x</td>
+                                            <td v-if="item.sExtend2==2">已分解</td>
+                                        </template>
+                                    </tr>
+                                    <tr v-else>
+                                        <td colspan="3" align="center">您尚未获得任何礼包</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="page bxfy" id="getGiftPageContent_892737z">
+                                <span>{{cfhd_zcx_page.pageIndex}} / {{cfhd_zcx_page.pageTotal}}</span>
+                                <a @click="pageChange(-1,'zcx')"
+                                   style="user-select:none;text-decoration: none;">上一页</a> /
+                                <a @click="pageChange(+1,'zcx')"
+                                   style="user-select:none;text-decoration: none;">下一页</a>
+                            </div>
+                        </div>
+                        <div class="fjb-box">
+                            <div class="dia-fjb-tit tit"></div>
+                            <div class="dia-fjb-bg">
+                                <div class="dia-fjb-head">
+                                    <span>武器名称</span>
+                                    <span>分解所获抽奖券</span>
+                                </div>
+                                <ul>
+                                    <li v-for="item in base_par">
+                                        <span v-if="item[4]==1">{{item[2]}}</span>
+                                        <span v-if="item[4]==1">{{item[3]}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--cfhd暂存箱end-->
+                <!-- CFHD获奖记录 Start-->
+                <div class="dia-zc-box dia-bg2" style="position: fixed;top: 20%;left: 1%;">
+                    <div class="content-box">
+                        <div class="zcx-box">
+                            <div class="dia-hj tit"></div>
+                            <div class="dia-zcx-bg">
+                                <table class="tab table_bor">
+                                    <thead>
+                                    <tr>
+                                        <th>时间</th>
+                                        <th>名称</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="getGiftContent_892737">
+                                    <tr v-if="cfhd_hjjl.length>0" v-for="(item,index) in cfhd_hjjl">
+                                        <template v-if="index>=cfhd_hjjl_page.pageStart&&index<=cfhd_hjjl_page.pageEnd">
+                                            <td>{{item.Sj}}</td>
+                                            <td>{{item.Name}}</td>
+                                        </template>
+                                    </tr>
+                                    <tr v-else>
+                                        <td colspan="3" align="center">您尚未获得任何礼包</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="page bxfy" id="getGiftPageContent_892737">
+                                <span>{{cfhd_hjjl_page.pageIndex}} / {{cfhd_hjjl_page.pageTotal}}</span>
+                                <a @click="pageChange(-1,'hjjl')"
+                                   style="user-select:none;text-decoration: none;">上一页</a> /
+                                <a @click="pageChange(+1,'hjjl')"
+                                   style="user-select:none;text-decoration: none;">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--获奖记录end-->
+
+                <!-- CFHD结果 -->
+                <div class="dia-zc-box" style="position: fixed;top: 20%;right: 0;">
+                    <div class="fjb-box">
+                        <div class="dia-fjb-bg">
+                            <div class="dia-fjb-head">
+                                <span>名称</span>
+                                <span>数量</span>
+                            </div>
+                            <ul>
+                                <li v-for="(item,index) in abc">
+                                    <span>{{index}}</span>
+                                    <span>{{item}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CFHD奖励兑换 -->
+        <div class="part part3" data-tabc="2" style="display: block;">
+            <div class="tit tit3"></div>
+            <p class="part-intro">玩家可通过获取的积分，兑换奖励</p>
+            <p class="player-jf">您当前有: <span class="cfhdJifen">{{cfhd_jf}}</span>积分</p>
+            <div class="prize-wrap">
+                <div class="prize-item">
+                    <span>1000积分</span>
+                    <div class="prize prize1-1"></div>
+                    <a href="javascript:amsExchange(1);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>300积分</span>
+                    <div class="prize prize1-2"></div>
+                    <a href="javascript:amsExchange(2);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>300积分</span>
+                    <div class="prize prize1-3"></div>
+                    <a href="javascript:amsExchange(3);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>300积分</span>
+                    <div class="prize prize1-4"></div>
+                    <a href="javascript:amsExchange(4);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>300积分</span>
+                    <div class="prize prize1-5"></div>
+                    <a href="javascript:amsExchange(5);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>300积分</span>
+                    <div class="prize prize1-6"></div>
+                    <a href="javascript:amsExchange(6);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+
+                <div class="prize-item">
+                    <span>300积分</span>
+                    <div class="prize prize1-7"></div>
+                    <a href="javascript:amsExchange(7);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>150积分</span>
+                    <div class="prize prize1-8"></div>
+                    <a href="javascript:amsExchange(8);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>100积分</span>
+                    <div class="prize prize1-9"></div>
+                    <a href="javascript:amsExchange(9);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>50积分</span>
+                    <div class="prize prize1-10"></div>
+                    <a href="javascript:amsExchange(10);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+                <div class="prize-item">
+                    <span>50积分</span>
+                    <div class="prize prize1-11"></div>
+                    <a href="javascript:amsExchange(11);" onclick="PTTSendClick('btn','btn-djdh1','点击兑换')"
+                       class="btn-djdh1"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 恭喜你获得以下道具  抽一次-->
+        <div class="dia lot1" id="lot1_price1" v-if="cfhd_cjjg.length>0&&cfhd_type==1"
+             style="outline: none;position: absolute;top: 25%;left: 35%;">
+            <div class="dia-gxn-box">
+                <div class="lot1-gxn-tit"></div>
+                <div class="lot1-gnx-box">
+                    <div v-for="item in cfhd_cjjg" class="lot1-prop" :class="item"></div>
+                </div>
+            </div>
+            <a @click="cfhd_type==0;cfhd_cjjg=[]" class="dia-close" title="关闭"></a>
+        </div>
+        <!-- 恭喜你获得以下道具  抽十次-->
+        <div class="dia lot2" id="lot1_price10" v-if="cfhd_cjjg.length>0&&cfhd_type==10"
+             style="outline: none;position: absolute;top: 25%;left: 28%;">
+            <div class="dia-gxn-box">
+                <div class="lot1-gxn-tit"></div>
+                <div class="lot1-gnx-box">
+                    <div v-for="item in cfhd_cjjg" class="lot1-prop " :class="item"></div>
+                </div>
+            </div>
+            <a @click="cfhd_type==0;cfhd_cjjg=[]" class="dia-close" title="关闭"></a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    let watermark = {};
+    let setWatermark = str => {
+        let id = '1.23452384164.123412416';
+        if (document.getElementById(id) !== null) {
+            document.body.removeChild(document.getElementById(id));
+        } //创建一个画布
+        let can = document.createElement('canvas'); //设置画布的长宽
+        can.width = 200;
+        can.height = 200;
+        let cans = can.getContext('2d'); //旋转角度
+        cans.rotate((-25 * Math.PI) / 180);
+        cans.font = '18px Vedana'; //设置填充绘画的颜色、渐变或者模式
+        cans.fillStyle = 'rgba(8,241,252,0.10)'; //设置文本内容的当前对齐方式
+        cans.textAlign = 'left'; //设置在绘制文本时使用的当前文本基线
+        cans.textBaseline = 'Middle'; //在画布上绘制填色的文本（输出的文本，开始绘制文本的X坐标位置，开始绘制文本的Y坐标位置）
+        for (let i = 0; i < str.length; i++) {
+            cans.fillText(str[i], can.width / 8, can.height / 2 + (i * 30));
+        }
+
+        let div = document.createElement('div');
+        div.id = id;
+        div.style.pointerEvents = 'none';
+        div.style.top = '30px';
+        div.style.left = '0px';
+        div.style.position = 'fixed';
+        div.style.zIndex = '100000';
+        div.style.width = document.documentElement.clientWidth + 'px';
+        div.style.height = document.documentElement.clientHeight + 'px';
+        div.style.background = 'url(' + can.toDataURL('image/png') + ') left top repeat';
+        document.body.appendChild(div);
+        return id;
+    };
+
+    // 该方法只允许调用一次
+    watermark.set = str => {
+        let id = setWatermark(str);
+        setInterval(() => {
+            if (document.getElementById(id) === null) {
+                id = setWatermark(str);
+            }
+        }, 500);
+        window.onresize = () => {
+            setWatermark(str);
+        };
+    };
+
+    watermark.set(['不需要登录', '不需要充值']);
+
+    //概率
+    Vue.createApp({
+        data() {
+            return {
+                abc: {
+                    '毒蝎': 0,
+                    '尼泊尔军刀 电弧之心': 0,
+                    '沙漠之鹰 电弧之心': 0,
+                    'M4A1 黑曜': 0,
+                    '加特林机枪 黑曜': 0,
+                    'AWM 贵族': 0,
+                    'AK-47 贵族': 0,
+                    '轻型军用手斧 动力珍珠': 0,
+                    'SCAR LIGHT 毒药': 0,
+                    'M14EBR 红心皇后': 0,
+                    'VECTOR 热带雨林': 0,
+                    '积分x5': 0,
+                    '积分x10': 0,
+                    '积分x20': 0,
+                    '积分x50': 0,
+                    '积分x100': 0,
+                },
+                base_par: [
+                    [1, 20, '毒蝎', 10, 1, 'dia-prop2-1'],
+                    [21, 50, '尼泊尔军刀 电弧之心', 5, 1, 'dia-prop2-2'],
+                    [51, 80, '沙漠之鹰 电弧之心', 5, 1, 'dia-prop2-3'],
+                    [81, 110, 'M4A1 黑曜', 5, 1, 'dia-prop2-4'],
+                    [111, 140, '加特林机枪 黑曜', 5, 1, 'dia-prop2-5'],
+                    [141, 170, 'AWM 贵族', 5, 1, 'dia-prop2-6'],
+                    [171, 200, 'AK-47 贵族', 5, 1, 'dia-prop2-7'],
+                    [201, 300, '轻型军用手斧 动力珍珠', 3, 1, 'dia-prop2-8'],
+                    [301, 500, 'SCAR LIGHT 毒药', 2, 1, 'dia-prop2-9'],
+                    [501, 1000, 'M14EBR 红心皇后', 1, 1, 'dia-prop2-16'],
+                    [1001, 1500, 'VECTOR 热带雨林', 1, 1, 'dia-prop2-15'],
+                    [1501, 1550, '积分x100', 100, 0, 'dia-prop2-14'],
+                    [1551, 1650, '积分x50', 50, 0, 'dia-prop2-13'],
+                    [1651, 2150, '积分x20', 20, 0, 'dia-prop2-12'],
+                    [2151, 5650, '积分x10', 10, 0, 'dia-prop2-11'],
+                    [5651, 10000, '积分x5', 5, 0, 'dia-prop2-10'],
+                ],
+                sendTime: "", //当前时间
+                cfhd_czjl: 0,//cfhd充值记录
+                cfhd_cjj: 0, //cfhd抽奖券
+                cfhd_jf: 0, //cfhd积分
+                cfhd_cjcs: 0, //cfhd抽奖次数
+                cfhd_hjjl: [],//获奖记录
+                cfhd_zcx: [],//暂存箱
+                cfhd_cjjg: [],//抽奖结果
+                cfhd_type: 0,//抽奖类型 1 或 10
+                cfhd_hjjl_page: {
+                    pageIndex: 1,//当前页
+                    pageTotal: 1,//总页数
+                    pageStart: 0,//当前分页数据
+                    pageEnd: 9
+                },
+                cfhd_zcx_page: {
+                    pageIndex: 1,//当前页
+                    pageTotal: 1,//总页数
+                    pageStart: 0,//当前分页数据
+                    pageEnd: 9
+                },
+            }
+        },
+        methods: {
+            //购买抽奖券
+            cjjAdd(num) {
+                this.cfhd_cjj = this.cfhd_cjj + num;
+                this.format()
+            },
+            //充值记录
+            czjlAdd(num) {
+                this.cfhd_czjl = this.cfhd_czjl + num;
+            },
+            //抽奖
+            SendClick(num) {
+                let _this = this
+                var zjxx = {};
+                _this.cfhd_type = num
+                if (_this.cfhd_cjj >= num) {
+                    _this.cjjAdd(Number('-' + num))//减抽奖券
+                    _this.cfhd_cjcs = _this.cfhd_cjcs + num//统计抽奖次数
+                    for (var s = 0; s < num; s++) {
+                        var sjs = Math.ceil(Math.random() * 10000);//概率
+                        for (j = 0; j < _this.base_par.length; j++) {
+                            var zxs = _this.base_par[j][0]
+                            var zds = _this.base_par[j][1]
+                            if (sjs >= zxs && sjs <= zds) {
+                                _this.abc[_this.base_par[j][2]]++
+                                _this.cfhd_hjjl.push({Sj: _this.format(), Name: _this.base_par[j][2]})//获奖记录
+                                _this.cfhd_cjjg.push(_this.base_par[j][5])
+                                if (_this.base_par[j][4] == 0) {//积分
+                                    _this.cfhd_jf = _this.cfhd_jf + _this.base_par[j][3]
+                                } else {//存暂存箱
+                                    _this.cfhd_zcx.push({
+                                        Name: _this.base_par[j][2],
+                                        sExtend2: 0,
+                                        iStatus: 3,
+                                        Keynum: _this.base_par[j][3]
+                                    })//获奖记录
+                                }
+                            }
+                        }
+                    }
+                    _this.cfhd_hjjl_page.pageTotal = Number(_this.pagerCount(_this.cfhd_hjjl.length, 10))
+                    _this.cfhd_zcx_page.pageTotal = Number(_this.pagerCount(_this.cfhd_zcx.length, 10))
+                } else {
+                    alert('您的抽奖券不足~')
+                }
+            },
+            //获取当前时间
+            format() {
+                const nowDate = new Date();
+                let yy = nowDate.getFullYear();
+                let mm = nowDate.getMonth() + 1;
+                let dd = nowDate.getDate();
+                let hh = nowDate.getHours();
+                let mf = nowDate.getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
+                let ss = nowDate.getSeconds() < 10 ? '0' + new Date().getSeconds() : new Date().getSeconds();
+                let nDate = yy + '-' + mm + '-' + dd + ' ' + hh + ':' + mf + ':' + ss;
+                return nDate
+            },
+            //获取页码
+            pagerCount(count, pageSize) {
+                if (typeof (count) == "number") {
+                    if (count > 0) {
+                        try {
+                            var _pagerCount = count % pageSize == 0 ? count / pageSize : count / pageSize + 1;
+                            var c = _pagerCount.toFixed(0);//小数取整
+                            _pagerCount = c > _pagerCount ? c - 1 : c;//过滤四舍五入
+                            return _pagerCount;
+
+                        } catch (error) {
+                            return 0;
+                        }
+
+                    } else {
+                        return 0;
+                    }
+                } else {
+                    return 0;
+                }
+            },
+            //改变页数
+            pageChange(num, type) {
+                if (type == 'hjjl') {
+                    if ((this.cfhd_hjjl_page.pageIndex == 1 && num < 0) || (this.cfhd_hjjl_page.pageIndex == this.cfhd_hjjl_page.pageTotal && num > 0)) {
+                    } else {
+                        this.cfhd_hjjl_page.pageIndex = this.cfhd_hjjl_page.pageIndex + num
+                    }
+                    this.cfhd_hjjl_page.pageStart = 10 * (this.cfhd_hjjl_page.pageIndex - 1)
+                    this.cfhd_hjjl_page.pageEnd = this.cfhd_hjjl_page.pageStart + 9
+                }
+                if (type == 'zcx') {
+                    if ((this.cfhd_zcx_page.pageIndex == 1 && num < 0) || (this.cfhd_zcx_page.pageIndex == this.cfhd_zcx_page.pageTotal && num > 0)) {
+                    } else {
+                        this.cfhd_zcx_page.pageIndex = this.cfhd_zcx_page.pageIndex + num
+                    }
+                    this.cfhd_zcx_page.pageStart = 10 * (this.cfhd_zcx_page.pageIndex - 1)
+                    this.cfhd_zcx_page.pageEnd = this.cfhd_zcx_page.pageStart + 9
+                }
+            },
+        }
+    }).mount('#app')
+</script>
+</html>
