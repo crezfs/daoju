@@ -1271,7 +1271,7 @@
         }
 
         .part5 {
-            height: 1700px
+            height: 1550px
         }
 
         .part6 {
@@ -1638,7 +1638,8 @@
         .wish-list {
             position: relative;
             font-size: 0;
-            text-align: center
+            text-align: center;
+            margin-top: 285px;
         }
 
         .wish-list .wish-list-item {
@@ -1694,9 +1695,8 @@
 
         .wish-list .pop-choose-box .floating-layer {
             position: absolute;
-            top: -534px;
+            top: -275px;
             left: 0;
-            display: none
         }
 
         .wish-list .pop-choose-box .floating-layer .close-floating {
@@ -1707,7 +1707,7 @@
         }
 
         .wish-list .pop-choose-box .floating-layer3 {
-            top: -237px
+            top: 15px
         }
 
         .wish-list .pop-choose-box .floating-layer a {
@@ -2691,6 +2691,12 @@
     <p style="text-align: center">此页面只是为了测试概率,抽到的道具不会发送游戏仓库</p>
     <p style="text-align: center">任何以此页面盈利的行为,均与作者无关</p>
     <p style="text-align: center">如有侵权请联系作者QQ:1839327863(发送邮件或者加好友备注)</p>
+    <p style="text-align: center">原活动
+        <a href="https://act.daoju.qq.com/act/a20221014shj/index.html"
+           style="color: red;user-select:none;text-decoration: none;">电脑版</a>
+        <a href="https://app.daoju.qq.com/act/a20221014shj/index.html"
+           style="color: red;user-select:none;text-decoration: none;">手机版</a>
+    </p>
 </div>
 <div class="part part2" id="app" @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
     <div class="con" data-tabc="2" style="display: block;">
@@ -2716,188 +2722,6 @@
                 </div>
             </div>
         </div>
-        <!--        <div class="part part4">-->
-        <!--            <div class="page-title">-->
-        <!--                <i class="page-title-4"></i>-->
-        <!--            </div>-->
-        <!--            <p class="key-num">剩余许愿币数量：<em class="_715">1</em></p>-->
-        <!--            <p class="key-tips">-->
-        <!--                每付费购买获得1个钥匙，自动获得1个许愿币<br>-->
-        <!--                选择愿望后可在许愿池中进行投币许愿，获得许愿值，更改或领取愿望则许愿值清零-->
-        <!--            </p>-->
-        <!--            <div class="wish-list">-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <div class="pop-choose-box">-->
-        <!--                        <span class="level">1级愿望</span>-->
-        <!--                        <a class="btn-change-wish replace-btn1" href="javascript:;"-->
-        <!--                           onclick="PTTSendClick('btn','change-wish1','更换愿望1')">更换愿望</a>-->
-        <!--                        <i class="doubt-icon show1wish show1wish0"></i>-->
-        <!--                        <div class="box-c">-->
-        <!--                            <div class="prize-box show1wish show1wish1" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p1.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show1wish show1wish2" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p2.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show1wish show1wish3" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p3.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show1wish show1wish4" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p4.png">-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="floating-layer floating-layer1">-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(1,2);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn1','选择1')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(1,1);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn2','选择2')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(1,4);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn3','选择3')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(1,3);;"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn4','选择4')"></a>-->
-        <!--                            <i class="close-floating" onclick="$('.floating-layer1').hide()"></i>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <a class="btn-wish-get" href="javascript:get_wish_award(1);"-->
-        <!--                       onclick="PTTSendClick('btn','wish-get1','领取1')"></a>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        所需许愿值：<em>400</em>-->
-        <!--                    </p>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        已有许愿值：<em class="_697">X</em>-->
-        <!--                    </p>-->
-        <!--                </div>-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <div class="pop-choose-box">-->
-        <!--                        <span class="level">2级愿望</span>-->
-        <!--                        <a class="btn-change-wish replace-btn2" href="javascript:;"-->
-        <!--                           onclick="PTTSendClick('btn','change-wish2','更换愿望2')">更换愿望</a>-->
-        <!--                        <i class="doubt-icon show2wish show2wish0"></i>-->
-        <!--                        <div class="box-c">-->
-        <!--                            <div class="prize-box show2wish show2wish1" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p5.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show2wish show2wish2" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p6.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show2wish show2wish3" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p7.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show2wish show2wish4" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p8.png">-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="floating-layer floating-layer2">-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(2,1);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn1','选择1')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(2,2);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn2','选择2')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(2,3);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn3','选择3')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(2,4);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn4','选择4')"></a>-->
-        <!--                            <i class="close-floating" onclick="$('.floating-layer2').hide()"></i>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <a class="btn-wish-get" href="javascript:get_wish_award(2);"-->
-        <!--                       onclick="PTTSendClick('btn','wish-get2','领取2')"></a>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        所需许愿值：<em>800</em>-->
-        <!--                    </p>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        已有许愿值：<em class="_698">X</em>-->
-        <!--                    </p>-->
-        <!--                </div>-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <div class="pop-choose-box">-->
-        <!--                        <span class="level">3级愿望</span>-->
-        <!--                        <a class="btn-change-wish replace-btn3" href="javascript:;"-->
-        <!--                           onclick="PTTSendClick('btn','change-wish3','更换愿望3')">更换愿望</a>-->
-        <!--                        <i class="doubt-icon show3wish show3wish0"></i>-->
-        <!--                        <div class="box-c">-->
-        <!--                            <div class="prize-box show3wish show3wish1" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p9.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show3wish show3wish2" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p10.png">-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="floating-layer floating-layer3">-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(3,1);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn1','选择1')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(3,2);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn2','选择2')"></a>-->
-        <!--                            <i class="close-floating" onclick="$('.floating-layer3').hide()"></i>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <a class="btn-wish-get" href="javascript:get_wish_award(3);;"-->
-        <!--                       onclick="PTTSendClick('btn','wish-get3','领取3')"></a>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        所需许愿值：<em>1000</em>-->
-        <!--                    </p>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        已有许愿值：<em class="_699">X</em>-->
-        <!--                    </p>-->
-        <!--                </div>-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <div class="pop-choose-box">-->
-        <!--                        <span class="level">4级愿望</span>-->
-        <!--                        <a class="btn-change-wish replace-btn4" href="javascript:;"-->
-        <!--                           onclick="PTTSendClick('btn','change-wish4','更换愿望4')">更换愿望</a>-->
-        <!--                        <i class="doubt-icon show4wish show4wish0"></i>-->
-        <!--                        <div class="box-c">-->
-        <!--                            <div class="prize-box show4wish show4wish1" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p11.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show4wish show4wish2" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p12.png">-->
-        <!--                            </div>-->
-        <!--                            <div class="prize-box show4wish show4wish3" style="display: none;">-->
-        <!--                                <img alt="" src="wish/p13.png">-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="floating-layer floating-layer4">-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(4,1);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn1','选择1')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(4,2);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn2','选择2')"></a>-->
-        <!--                            <a class="wish-choose-btn" href="javascript:select_wish(4,3);"-->
-        <!--                               onclick="PTTSendClick('btn','choose-btn3','选择3')"></a>-->
-        <!--                            <i class="close-floating" onclick="$('.floating-layer4').hide()"></i>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <a class="btn-wish-get" href="javascript:get_wish_award(4);;"-->
-        <!--                       onclick="PTTSendClick('btn','wish-get4','领取4')"></a>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        所需许愿值：<em>1200</em>-->
-        <!--                    </p>-->
-        <!--                    <p class="wish-value">-->
-        <!--                        已有许愿值：<em class="_700">X</em>-->
-        <!--                    </p>-->
-        <!--                </div>-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <img alt="" src="pop13.png">-->
-        <!--                    <a class="btn-wish-investment" href="javascript:wish_coin(1);"-->
-        <!--                       onclick="PTTSendClick('btn','wish-investment1','投币1')"></a>-->
-        <!--                </div>-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <img alt="" src="pop14.png">-->
-        <!--                    <a class="btn-wish-investment" href="javascript:wish_coin(2);"-->
-        <!--                       onclick="PTTSendClick('btn','wish-investment2','投币2')"></a>-->
-        <!--                </div>-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <img alt="" src="pop15.png">-->
-        <!--                    <a class="btn-wish-investment" href="javascript:wish_coin(3);"-->
-        <!--                       onclick="PTTSendClick('btn','wish-investment3','投币3')"></a>-->
-        <!--                </div>-->
-        <!--                <div class="wish-list-item">-->
-        <!--                    <img alt="" src="pop16.png">-->
-        <!--                    <a class="btn-wish-investment" href="javascript:wish_coin(4);"-->
-        <!--                       onclick="PTTSendClick('btn','wish-investment4','投币4')"></a>-->
-        <!--                </div>-->
-
-        <!--            </div>-->
-        <!--        </div>-->
         <div class="tab-box">
             <!-- 暂存箱 -->
             <div class="dia dia-zc-wrap" id="showMyGiftContent_899272z">
@@ -2976,7 +2800,8 @@
                 </div>
             </div>
             <!--暂存箱end-->
-            <div style="width: 100%;background: #0000007d;position: fixed;height: 100%;top: 0;left: 0;" v-if="cfhd_cjjg.length>0" @click="cfhd_type==0;cfhd_cjjg=[]">
+            <div style="width: 100%;background: #0000007d;position: fixed;height: 100%;top: 0;left: 0;"
+                 v-if="cfhd_cjjg.length>0" @click="cfhd_type==0;cfhd_cjjg=[]">
                 <!-- 恭喜你获得以下道具  抽一次-->
                 <div class="dia" id="dia_price1" v-if="cfhd_type==1"
                      style="position: fixed;top: 25%;left: 26.7%;">
@@ -3112,8 +2937,78 @@
             </div>
 
         </div>
+        <!--许愿币-->
+        <div class="part part4">
+            <div class="page-title">
+                <i class="page-title-4"></i>
+            </div>
+            <p class="key-num">剩余许愿币数量：<em class="_715">{{cfhd_xyb}}</em></p>
+            <p class="key-tips">
+                每付费购买获得1个钥匙，自动获得1个许愿币<br>
+                选择愿望后可在许愿池中进行投币许愿，获得许愿值，更改或领取愿望则许愿值清零
+            </p>
+            <div class="wish-list">
+                <div class="wish-list-item">
+                    <div class="pop-choose-box">
+                        <span class="level">1级愿望</span>
+                        <i class="doubt-icon show1wish show1wish0"></i>
+                        <div class="floating-layer floating-layer1">
+                        </div>
+                    </div>
+                    <a class="btn-wish-get" href="javascript:get_wish_award(1);"
+                       onclick="PTTSendClick('btn','wish-get1','领取1')"></a>
+                    <p class="wish-value">
+                        所需许愿值：<em>400</em>
+                    </p>
+                </div>
+                <div class="wish-list-item">
+                    <div class="pop-choose-box">
+                        <span class="level">2级愿望</span>
+                        <i class="doubt-icon show2wish show2wish0"></i>
+                        <div class="floating-layer floating-layer2">
+                        </div>
+                    </div>
+                    <a class="btn-wish-get" href="javascript:get_wish_award(2);"
+                       onclick="PTTSendClick('btn','wish-get2','领取2')"></a>
+                    <p class="wish-value">
+                        所需许愿值：<em>800</em>
+                    </p>
+                </div>
+                <div class="wish-list-item">
+                    <div class="pop-choose-box">
+                        <span class="level">3级愿望</span>
+                        <i class="doubt-icon show3wish show3wish0"></i>
+                        <div class="floating-layer floating-layer3">
+                        </div>
+                    </div>
+                    <a class="btn-wish-get" href="javascript:get_wish_award(3);;"
+                       onclick="PTTSendClick('btn','wish-get3','领取3')"></a>
+                    <p class="wish-value">
+                        所需许愿值：<em>1000</em>
+                    </p>
+                </div>
+                <div class="wish-list-item">
+                    <div class="pop-choose-box">
+                        <span class="level">4级愿望</span>
+                        <i class="doubt-icon show4wish show4wish0"></i>
+                        <div class="floating-layer floating-layer4">
+                        </div>
+                    </div>
+                    <a class="btn-wish-get" href="javascript:get_wish_award(4);;"
+                       onclick="PTTSendClick('btn','wish-get4','领取4')"></a>
+                    <p class="wish-value">
+                        所需许愿值：<em>1200</em>
+                    </p>
+                </div>
+                <p class="wish-value" style="font-size: 30px;color: #f9ffe2;">
+                    已有许愿值：<em class="_697">{{cfhd_xyz}}</em>
+                </p>
+                <div class="wish-list-item">
+                    <a class="btn-wish-investment" @click="xyzAdd(1)"></a>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
 </div>
 </body>
@@ -3221,6 +3116,8 @@
                 sendTime: "", //当前时间
                 cfhd_czjl: 0,//cfhd充值记录
                 cfhd_cjj: 0, //cfhd抽奖券
+                cfhd_xyb: 0, //cfhd许愿币
+                cfhd_xyz: 0,//cfhd许愿值
                 cfhd_jf: 0, //cfhd积分
                 cfhd_dj: 0, //cfhd点券
                 cfhd_cjcs: 0, //cfhd抽奖次数
@@ -3243,9 +3140,35 @@
             }
         },
         methods: {
+            xyzAdd() {
+                let _this = this
+                let xy = [
+                    [1, 500, 1,],
+                    [501, 900, 2,],
+                    [901, 978, 5,],
+                    [979, 998, 10,],
+                    [999, 1000, 50,],
+                ]
+                var sjs = Math.ceil(Math.random() * 1000);//概率
+                if (_this.cfhd_xyb > 0) {
+                    for (j = 0; j < xy.length; j++) {
+                        var zxs = xy[j][0]
+                        var zds = xy[j][1]
+                        if (sjs >= zxs && sjs <= zds) {
+                            _this.cfhd_xyz = _this.cfhd_xyz + xy[j][2]
+                        }
+                    }
+                    _this.cfhd_xyb--
+                } else {
+                    alert("许愿币不足")
+                }
+            },
             //购买抽奖券
             cjjAdd(num) {
                 this.cfhd_cjj = this.cfhd_cjj + num;
+                if (num > 0) {
+                    this.cfhd_xyb = this.cfhd_xyb + num;
+                }
                 this.format()
             },
             //充值记录
