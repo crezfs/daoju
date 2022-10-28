@@ -3005,6 +3005,7 @@
                 </p>
                 <div class="wish-list-item">
                     <a class="btn-wish-investment" @click="xyzAdd(1)"></a>
+                    <a @click="xyzAdd(cfhd_xyb)" style="font-size: 25px;color: white;">投入所有许愿币</a>
                 </div>
             </div>
         </div>
@@ -3140,7 +3141,7 @@
             }
         },
         methods: {
-            xyzAdd() {
+            xyzAdd(num) {
                 let _this = this
                 let xy = [
                     [1, 500, 1,],
@@ -3149,16 +3150,18 @@
                     [979, 998, 10,],
                     [999, 1000, 50,],
                 ]
-                var sjs = Math.ceil(Math.random() * 1000);//概率
                 if (_this.cfhd_xyb > 0) {
-                    for (j = 0; j < xy.length; j++) {
-                        var zxs = xy[j][0]
-                        var zds = xy[j][1]
-                        if (sjs >= zxs && sjs <= zds) {
-                            _this.cfhd_xyz = _this.cfhd_xyz + xy[j][2]
+                    for (var s = 0; s < num; s++) {
+                        var sjs = Math.ceil(Math.random() * 1000);//概率
+                        for (j = 0; j < xy.length; j++) {
+                            var zxs = xy[j][0]
+                            var zds = xy[j][1]
+                            if (sjs >= zxs && sjs <= zds) {
+                                _this.cfhd_xyz = _this.cfhd_xyz + xy[j][2]
+                            }
                         }
+                        _this.cfhd_xyb--
                     }
-                    _this.cfhd_xyb--
                 } else {
                     alert("许愿币不足")
                 }
