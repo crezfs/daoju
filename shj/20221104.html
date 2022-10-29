@@ -6,8 +6,6 @@
     <title>山海经</title>
     <style>
         @charset "UTF-8";
-
-
         .btn-buy-jyk {
             background-position: -2057px -576px;
             width: 101px;
@@ -2802,7 +2800,7 @@
             </div>
             <!--暂存箱end-->
             <div style="width: 100%;background: #0000007d;position: fixed;height: 100%;top: 0;left: 0;"
-                 v-if="cfhd_cjjg.length>0" @click="cfhd_type==0;cfhd_cjjg=[]">
+                 v-if="cfhd_cjjg.length>0" @click="cfhd_type==0;cfhd_cjjg=[];cfhd_hddtype==0">
                 <!-- 恭喜你获得以下道具  抽一次-->
                 <div class="dia" id="dia_price1" v-if="cfhd_type==1"
                      style="position: fixed;top: 25%;left: 26.7%;">
@@ -2814,12 +2812,16 @@
                                     <img alt="" :src="`lo1/${item}.png`">
                                 </li>
                             </ul>
-                            <div class="dia-gnx-btn-box">
+                            <div class="dia-gnx-btn-box" v-if="cfhd_hddtype==0">
                                 <a class="draw-btn1 chou chou1" @click.stop="SendClick(1)"></a>
                                 <a class="draw-btn10 chou chou10" @click.stop="SendClick(10)"></a>
                             </div>
+                            <div class="dia-gnx-btn-box" v-if="cfhd_hddtype==1">
+                                <a class="draw-btn1 chou chou1" @click.stop="SendHdd(1)"></a>
+                                <a class="draw-btn10 chou chou10" @click.stop="SendHdd(10)"></a>
+                            </div>
                         </div>
-                        <a class="dia-close" @click="cfhd_type==0;cfhd_cjjg=[]" title="关闭"></a>
+                        <a class="dia-close" @click="cfhd_type==0;cfhd_cjjg=[];cfhd_hddtype==0" title="关闭"></a>
                     </div>
                 </div>
                 <!-- 恭喜你获得以下道具  抽十次-->
@@ -2833,12 +2835,16 @@
                                     <img alt="" :src="`lo1/${item}.png`">
                                 </li>
                             </ul>
-                            <div class="dia-gnx-btn-box">
+                            <div class="dia-gnx-btn-box" v-if="cfhd_hddtype==0">
                                 <a class="draw-btn1 chou chou1" @click.stop="SendClick(1)"></a>
                                 <a class="draw-btn10 chou chou10" @click.stop="SendClick(10)"></a>
                             </div>
+                            <div class="dia-gnx-btn-box" v-if="cfhd_hddtype==1">
+                                <a class="draw-btn1 chou chou1" @click.stop="SendHdd(1)"></a>
+                                <a class="draw-btn10 chou chou10" @click.stop="SendHdd(10)"></a>
+                            </div>
                         </div>
-                        <a class="dia-close" @click="cfhd_type==0;cfhd_cjjg=[]" title="关闭"></a>
+                        <a class="dia-close" @click="cfhd_type==0;cfhd_cjjg=[];cfhd_hddtype==0" title="关闭"></a>
                     </div>
                 </div>
             </div>
@@ -2880,58 +2886,40 @@
                         <div class="reward-list-item">
                             <div class="points-frame">500积分</div>
                             <img alt="" src="pop17.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(1);"
-                               onclick="PTTSendClick('btn','points-get1','领取1')"></a>
                         </div>
                         <div class="reward-list-item">
                             <div class="points-frame">500积分</div>
                             <img alt="" src="pop18.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(2);"
-                               onclick="PTTSendClick('btn','points-get2','领取2')"></a>
                         </div>
                         <div class="reward-list-item">
                             <div class="points-frame">500积分</div>
                             <img alt="" src="pop19.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(3);"
-                               onclick="PTTSendClick('btn','points-get3','领取3')"></a>
                         </div>
                         <div class="reward-list-item">
                             <div class="points-frame">400积分</div>
                             <img alt="" src="pop20.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(4);"
-                               onclick="PTTSendClick('btn','points-get4','领取4')"></a>
                         </div>
                         <div class="reward-list-item">
                             <div class="points-frame">400积分</div>
                             <img alt="" src="pop21.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(5);"
-                               onclick="PTTSendClick('btn','points-get5','领取5')"></a>
                         </div>
                         <div class="reward-list-item">
                             <div class="points-frame">300积分</div>
                             <img alt="" src="pop22.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(6);"
-                               onclick="PTTSendClick('btn','points-get6','领取6')"></a>
                         </div>
                         <div class="reward-list-item">
                             <div class="points-frame">300积分</div>
                             <img alt="" src="pop23.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(7);"
-                               onclick="PTTSendClick('btn','points-get7','领取7')"></a>
                         </div>
                         <div class="reward-list-item">
                             <div class="points-frame">300积分</div>
                             <img alt="" src="pop24.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(8);"
-                               onclick="PTTSendClick('btn','points-get8','领取8')"></a>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide-next" style="width: 1200px;">
                         <div class="reward-list-item">
                             <div class="points-frame">300积分</div>
                             <img alt="" src="pop25.png">
-                            <a class="btn-points-get" href="javascript:amsExchange(9);"
-                               onclick="PTTSendClick('btn','points-get9','领取9')"></a>
                         </div>
                     </div>
                 </div>
@@ -3007,6 +2995,62 @@
                 <div class="wish-list-item">
                     <a class="btn-wish-investment" @click="xyzAdd(1)"></a>
                     <a @click="xyzAdd(cfhd_xyb)" style="font-size: 25px;color: white;">投入所有许愿币</a>
+                </div>
+            </div>
+        </div>
+        <!--抽蝴蝶刀-->
+        <div class="part part9">
+            <div class="page-title">
+                <i class="page-title-9"></i>
+            </div>
+            <div class="buy-gpjyk-box">
+                <a class="buy-gp-btn" @click="hddCjjAdd(1);gpAdd(1000)" style="user-select:none;text-decoration: none;">
+                        <span class="gpjyk-box">
+                            <em class="gpjyk-val">1000</em>
+                            <em>GP</em>
+                        </span>
+                    <span class="gpjyk-tips">购买1张蝴蝶刀抽奖券</span>
+                </a>
+                <a class="buy-gp-btn" @click="hddCjjAdd(10);gpAdd(9000)"
+                   style="user-select:none;text-decoration: none;">
+                        <span class="gpjyk-box">
+                            <em class="gpjyk-val">9000</em>
+                            <em>GP</em>
+                        </span>
+                    <span class="gpjyk-tips">购买10张蝴蝶刀抽奖券</span>
+                </a>
+            </div>
+            <div class="draw-box">
+                <img alt="" src="//game.gtimg.cn/images/actdaoju/act/a20221014shj/draw-pop-image2.png">
+                <div class="draw-btn-box">
+                    <div class="gp-text">
+                        <p>当前积分：<span class="gp_val">{{cfhd_jf1}}</span></p>
+                        <p>当前已消耗GP：<span class="_716">{{cfhd_GP}}</span></p>
+                    </div>
+                    <a class="draw-btn1 chouhd chouhd1" @click="SendHdd(1)"></a>
+                    <a class="draw-btn10 chouhd chouhd10" @click="SendHdd(10)"></a>
+                    <p class="draw-tips">您当前有<span class="_694">{{cfhd_hddCjj}}</span>张蝴蝶刀抽奖券</p>
+                </div>
+            </div>
+            <!-- 主奖池概率弹窗 -->
+            <div class="dia" style="position: fixed;bottom: 10%;left: 1%">
+                <div class="dia-probability-box">
+                    <div data-tabc-probability2="2" style="display: block;">
+                        <table class="probability-con1">
+                            <thead>
+                            <tr>
+                                <td>道具名</td>
+                                <td>数量</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="(item,index) in hdd_base">
+                                <td>{{item[2]}}</td>
+                                <td>{{item[3]}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3139,9 +3183,60 @@
                     pageStart: 0,//当前分页数据
                     pageEnd: 9
                 },
+                cfhd_jf1: 0,//蝴蝶刀积分
+                cfhd_GP: 0,//蝴蝶刀消耗GP
+                cfhd_hddCjj: 0,//蝴蝶刀抽奖券
+                cfhd_hddtype:0,
+                hdd_base: [
+                    [1, 10, '蝴蝶刀（原型）', 0, 1, 'lo_2_1'],
+                    [11, 80, '防弹衣（30天）', 0, 1, 'lo_2_2'],
+                    [81, 150, '防弹头盔（30天）', 0, 1, 'lo_2_3'],
+                    [151, 220, '生化弹匣（30天）', 0, 1, 'lo_2_4'],
+                    [221, 290, '步枪弹匣（30天）', 0, 1, 'lo_2_5'],
+                    [291, 360, '冲锋枪弹匣（30天）', 0, 1, 'lo_2_6'],
+                    [361, 430, '机枪弹匣（30天）', 0, 1, 'lo_2_7'],
+                    [431, 480, '妖姬（30天）', 0, 1, 'lo_2_8'],
+                    [481, 530, '女武神（30天）', 0, 1, 'lo_2_9'],
+                    [531, 580, '步枪消音器 茉莉（30天）', 0, 1, 'lo_2_10'],
+                    [581, 630, '冲锋枪消音器 茉莉（30天）', 0, 1, 'lo_2_11'],
+                    [631, 680, '名片 暗影部队（14天）', 0, 1, 'lo_2_12'],
+                    [681, 730, '头像 暗影部队（14天）', 0, 1, 'lo_2_13'],
+                    [731, 1000, '10 积分', 0, 0, 'lo_2_14'],
+                ]
             }
         },
         methods: {
+            SendHdd(num) {
+                let _this = this
+                _this.cfhd_cjjg = []
+                _this.cfhd_type = num
+                _this.cfhd_hddtype=1
+                if (_this.cfhd_hddCjj >= num) {
+                    _this.hddCjjAdd(Number('-' + num))//减抽奖券
+                    for (var s = 0; s < num; s++) {
+                        var sjs = Math.ceil(Math.random() * 1000);//概率
+                        for (j = 0; j < _this.hdd_base.length; j++) {
+                            var zxs = _this.hdd_base[j][0]
+                            var zds = _this.hdd_base[j][1]
+                            if (sjs >= zxs && sjs <= zds) {
+                                _this.hdd_base[j][3]++
+                                _this.cfhd_cjjg.push(_this.hdd_base[j][5])
+                                if (_this.hdd_base[j][4] == 0) {//积分
+                                    _this.cfhd_jf1 = _this.cfhd_jf1 + 10
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    alert('您的蝴蝶刀抽奖券不足~')
+                }
+            },
+            gpAdd(num) {
+                this.cfhd_GP = this.cfhd_GP + num;
+            },
+            hddCjjAdd(num) {
+                this.cfhd_hddCjj = this.cfhd_hddCjj + num;
+            },
             xyzAdd(num) {
                 let _this = this
                 let xy = [
@@ -3173,7 +3268,6 @@
                 if (num > 0) {
                     this.cfhd_xyb = this.cfhd_xyb + num;
                 }
-                this.format()
             },
             //充值记录
             czjlAdd(num) {
@@ -3182,9 +3276,8 @@
             //抽奖
             SendClick(num) {
                 let _this = this
-                _this.cfhd_type == 0;
+                _this.cfhd_hddtype=0
                 _this.cfhd_cjjg = []
-                var zjxx = {};
                 _this.cfhd_type = num
                 if (_this.cfhd_cjj >= num) {
                     _this.cjjAdd(Number('-' + num))//减抽奖券
