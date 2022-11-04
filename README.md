@@ -1,4 +1,4 @@
-## **[测试网站](https://crezfs.github.io/daoju/test)**
+## **[测试网站](https://crezfs.github.io/daoju/pifu/test)**
 
 ## **[毒蝎角色抽奖活动](https://crezfs.github.io/daoju/duxie/20221025)**
 
