@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <title>测试</title>
     <style>
-label{
-    font-size: 20px;
-}
-input{
-    font-size: 20px;
-    width: 500px;
-    margin: 10px 10px;
-}
-.col{
-    float: left;
-    width: 18%;
-    text-align: center;
-}
+        label, a {
+            font-size: 20px;
+        }
+
+        input {
+            font-size: 20px;
+            width: 500px;
+            margin: 10px 10px;
+        }
+
+        .col {
+            float: left;
+            width: 18%;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -26,12 +28,15 @@ input{
     <label> 时间</label>
     <input v-model="sj"/><br>
     <label>前</label>
-    <input v-model="t1"/><button @click="a11">交换</button><br>
+    <input v-model="t1"/>
+    <button @click="a11">交换</button>
+    <br>
     <label>后</label>
-    <input v-model="t2"/><button @click="b11">提交</button>
+    <input v-model="t2"/>
+    <button @click="b11">提交</button>
     <br>
     <div class="col" v-for="item in tsnum" style="margin: 10px">
-        <label >{{item}}</label>
+        <a :href="t1+item+t2" target="_blank">{{item}}</a>
         <br>
         <iframe :src="t1+item+t2" loading="lazy"></iframe>
     </div>
@@ -40,29 +45,30 @@ input{
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
 <script>
+
     //概率
     Vue.createApp({
         data() {
             return {
-                t1: "https://act.daoju.qq.com/act/a",
-                t2: "shj",
+                t1: "https://cfhd.cf.qq.com/cp/a",
+                t2: "netbar/",
                 ts: "60",
-                sj:"",
-                tsnum:[]
+                sj: "",
+                tsnum: []
             }
         },
-        computed: {
-        },
+        computed: {},
         methods: {
             a11() {
-               if (this.t1.indexOf("act.daoju")!=-1){
-                   this.t1="https://cfhd.cf.qq.com/cp/a"
-                   this.t2="netbar"
-               }else{
-                   this.t1="https://act.daoju.qq.com/act/a"
-                   this.t2="shj"
-               }
+                if (this.t2.indexOf("netbar") == -1) {
+                    this.t1 = "https://cfhd.cf.qq.com/cp/a"
+                    this.t2 = "netbar/"
+                } else {
+                    this.t1 = "https://cf.qq.com/cp/a"
+                    this.t2 = "wb/"
+                }
             },
             b11() {
                 let a = this.ts
@@ -70,7 +76,7 @@ input{
                 for (let i = 0; i < a; i++) {
                     b.push(this.addDay(i, new Date(this.sj)))
                 }
-                this.tsnum= b
+                this.tsnum = b
             },
             addDay(dayNumber, date) {
                 date = date ? date : new Date();
@@ -86,13 +92,13 @@ input{
             format() {
                 const nowDate = new Date();
                 let yy = nowDate.getFullYear();
-                let mm = nowDate.getMonth() + 1-1< 10 ? '0' + (nowDate.getMonth() + 1-1) : nowDate.getMonth() + 1-1;
+                let mm = nowDate.getMonth() + 1 - 1 < 10 ? '0' + (nowDate.getMonth() + 1 - 1) : nowDate.getMonth() + 1 - 1;
                 let nDate = yy + '-' + mm + '-01'
                 return nDate
             },
         },
-        mounted(){
-            this.sj= this.format()
+        mounted() {
+            this.sj = this.format()
         }
     }).mount('#app')
 </script>
