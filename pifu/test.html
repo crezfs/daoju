@@ -19,6 +19,10 @@
             width: 18%;
             text-align: center;
         }
+        button{
+            margin: 0 8px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -29,16 +33,20 @@
     <input v-model="sj"/><br>
     <label>前</label>
     <input v-model="t1"/>
-    <button @click="a11">交换</button>
+    <button @click="a11('netbar')">netbar</button>
+    <button @click="a11('wb')">wb</button>
+    <button @click="a11('store')">store</button>
     <br>
     <label>后</label>
     <input v-model="t2"/>
     <button @click="b11">提交</button>
     <br>
+    <div style="overflow: auto;height: 1060px">
     <div class="col" v-for="item in tsnum" style="margin: 10px">
         <a :href="t1+item+t2" target="_blank">{{item}}</a>
         <br>
         <iframe :src="t1+item+t2" loading="lazy"></iframe>
+    </div>
     </div>
 </div>
 </body>
@@ -61,13 +69,20 @@
         },
         computed: {},
         methods: {
-            a11() {
-                if (this.t2.indexOf("netbar") == -1) {
-                    this.t1 = "https://cfhd.cf.qq.com/cp/a"
-                    this.t2 = "netbar/"
-                } else {
-                    this.t1 = "https://cf.qq.com/cp/a"
-                    this.t2 = "wb/"
+            a11(t) {
+                switch (t) {
+                   case "netbar":
+                       this.t1 = "https://cfhd.cf.qq.com/cp/a"
+                       this.t2 = "netbar/"
+                        break;
+                    case "wb":
+                        this.t1 = "https://cf.qq.com/cp/a"
+                        this.t2 = "wb/"
+                        break;
+                    case "store":
+                        this.t1 = "https://act.daoju.qq.com/act/a"
+                        this.t2 = "store/"
+                        break;
                 }
             },
             b11() {
