@@ -308,6 +308,7 @@
 </head>
 <body>
 <div id="app" class="Home">
+    <textarea v-model="t"></textarea>
     <div class="Frame-content-inner">
         <div class="ToolItem-wrap  ">
             <div class="content">
@@ -339,10 +340,6 @@
 </div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-
-
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <script>
@@ -351,11 +348,7 @@
     Vue.createApp({
         data() {
             return {
-                t1: "https://cfhd.cf.qq.com/cp/a",
-                t2: "netbar/",
-                ts: "90",
-                sj: "",
-                tsnum: []
+                t: "",
             }
         },
         computed: {},
@@ -372,16 +365,6 @@
         },
         mounted() {
             let rid=this.getQueryString("rid")
-            $.get("https://www.douyu.com/japi/interact/cdn/pocket/anchorPocket?rid=99999",function(data,status){
-                alert("数据: " + data + "\n状态: " + status);
-            });
-            axios.get('https://www.douyu.com/japi/interact/cdn/pocket/anchorPocket?rid=99999')
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
             //https://www.douyu.com/japi/interact/cdn/pocket/anchorPocket?rid=99999
             //https://www.douyu.com/japi/interact/cdn/pocket/effective?rid=99999
         }
