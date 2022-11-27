@@ -13,11 +13,12 @@
     </style>
 </head>
 <body>
+<div id="app">
 <div style="font-size: 22px;color: #e4c781;font-weight: 700;">
     <p style="text-align: center">此页面只是为了测试概率,抽到的道具不会发送游戏仓库</p>
     <p style="text-align: center">任何以此页面盈利的行为,均与作者无关</p>
     <p style="text-align: center">如有侵权请联系作者QQ:1839327863(发送邮件或者加好友备注)</p>
-    <p style="text-align: center">本页面网址：https://crezfs.github.io/daoju/sfws_yyy/20221129</p>
+    <p style="text-align: center">本页面网址：<span >{{m_url}}</span></p>
     <p style="text-align: center">官方活动网址
         <a href="https://act.daoju.qq.com/act/a20221108store/"
            style="color: red;user-select:none;text-decoration: none;margin: 0 15px">电脑版</a>
@@ -25,7 +26,7 @@
            style="color: red;user-select:none;text-decoration: none;margin: 0 15px">手机版</a>
     </p>
 </div>
-<div class="g-wrap" id="app" @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
+<div class="g-wrap"  @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
     <!-- tab1开始 -->
     <div class="tab1-con" data-tabc="1" style="display: block;">
         <div class="container1">
@@ -436,6 +437,7 @@
         <a href="javascript:closeDialog();" class="dia-close" title="关闭"></a>
     </div>
 </div>
+</div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
 
@@ -538,6 +540,11 @@
                     pageStart: 0,//当前分页数据
                     pageEnd: 9
                 },
+            }
+        },
+        computed:{
+            m_url(){
+                return window.location.href
             }
         },
         methods: {

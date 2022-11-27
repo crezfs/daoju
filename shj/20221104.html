@@ -2686,11 +2686,12 @@
     </style>
 </head>
 <body>
+<div id="app">
 <div style="font-size: 22px;color: #e4c781;font-weight: 700;">
     <p style="text-align: center">此页面只是为了测试概率,抽到的道具不会发送游戏仓库</p>
     <p style="text-align: center">任何以此页面盈利的行为,均与作者无关</p>
     <p style="text-align: center">如有侵权请联系作者QQ:1839327863(发送邮件或者加好友备注)</p>
-    <p style="text-align: center">本页面网址：https://crezfs.github.io/daoju/shj/20221104</p>
+    <p style="text-align: center">本页面网址：<span >{{m_url}}</span></p>
     <p style="text-align: center">官方活动网址
         <a href="https://act.daoju.qq.com/act/a20221014shj"
            style="color: red;user-select:none;text-decoration: none;margin: 0 15px">电脑版</a>
@@ -2698,7 +2699,7 @@
            style="color: red;user-select:none;text-decoration: none;margin: 0 15px">手机版</a>
     </p>
 </div>
-<div class="part part2" id="app" @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
+<div class="part part2"  @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
     <div class="con" data-tabc="2" style="display: block;">
         <div class="part part3">
             <div class="page-title">
@@ -3057,6 +3058,7 @@
         </div>
     </div>
 </div>
+</div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
 
@@ -3203,6 +3205,11 @@
                     [681, 730, '头像 暗影部队（14天）', 0, 1, 'lo_2_13'],
                     [731, 1000, '10 积分', 0, 0, 'lo_2_14'],
                 ]
+            }
+        },
+        computed:{
+            m_url(){
+                return window.location.href
             }
         },
         methods: {
