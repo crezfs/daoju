@@ -2717,8 +2717,8 @@
             <div class="draw-box">
                 <img alt="" src="draw-pop-image.png">
                 <div class="draw-btn-box da2">
-                    <a class="draw-btn1 chou chou1" @click="SendClick(1)"></a>
-                    <a class="draw-btn10 chou chou10" @click="SendClick(10)"></a>
+                    <a class="draw-btn1 chou chou1" @click.stop="SendClick(1)"></a>
+                    <a class="draw-btn10 chou chou10" @click.stop="SendClick(10)"></a>
                     <p class="draw-tips">您当前有<span class="_696">{{cfhd_cjj}}</span>个抽奖钥匙</p>
                 </div>
             </div>
@@ -2801,8 +2801,7 @@
                 </div>
             </div>
             <!--暂存箱end-->
-            <div style="width: 100%;background: #0000007d;position: fixed;height: 100%;top: 0;left: 0;"
-                 v-if="cfhd_cjjg.length>0" @click="cfhd_type==0;cfhd_cjjg=[];cfhd_hddtype==0">
+            <div style="width: 100%;background: #0000007d;position: fixed;height: 100%;top: 0;left: 0;"  v-if="cfhd_cjjg.length>0" @click="cfhd_type==0;cfhd_cjjg=[];cfhd_hddtype==0">
                 <!-- 恭喜你获得以下道具  抽一次-->
                 <div class="dia" id="dia_price1" v-if="cfhd_type==1"
                      style="position: fixed;top: 25%;left: 26.7%;">
