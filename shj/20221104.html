@@ -3028,8 +3028,8 @@
                         <p>当前积分：<span class="gp_val">{{cfhd_jf1}}</span></p>
                         <p>当前已消耗GP：<span class="_716">{{cfhd_GP}}</span></p>
                     </div>
-                    <a class="draw-btn1 chouhd chouhd1" @click="SendHdd(1)"></a>
-                    <a class="draw-btn10 chouhd chouhd10" @click="SendHdd(10)"></a>
+                    <a class="draw-btn1 chouhd chouhd1" @click.stop="SendHdd(1)"></a>
+                    <a class="draw-btn10 chouhd chouhd10" @click.stop="SendHdd(10)"></a>
                     <p class="draw-tips">您当前有<span class="_694">{{cfhd_hddCjj}}</span>张蝴蝶刀抽奖券</p>
                 </div>
             </div>
