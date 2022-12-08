@@ -6,6 +6,7 @@
     <title>十方武圣-云悠悠</title>
     <link rel="stylesheet" href="swiper-3.4.2.min.css">
     <link rel="stylesheet" href="comm1.css" charset="utf-8">
+    <link rel="stylesheet" href="comm2.css" charset="utf-8">
     <style>
         a {
             user-select: none;
@@ -27,17 +28,15 @@
                style="color: red;user-select:none;text-decoration: none;margin: 0 15px">手机版</a>
         </p>
     </div>
-    <div class="g-wrap" @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
+    <div v-show="pageType==1" class="g-wrap" @click="cfhd_type==0;cfhd_cjjg=[]" style="margin-top:20px">
         <!-- tab1开始 -->
         <div class="tab1-con" data-tabc="1" style="display: block;">
             <div class="container1">
                 <div class="toptab" style="transition: transform .3s,background-color .3s,box-shadow .3s"
                      data-hover="0">
                     <div class="tab-con">
-                        <a href="javascript:;" data-tabt="1" onclick="PTTSendClick('btn','tab1','电竞十周年')"
-                           class="tab1 on"></a>
-                        <a href="javascript:alert('敬请期待~');" onclick="PTTSendClick('btn','tab2','云悠悠')"
-                           class="tab2"></a>
+                        <a href="javascript:;" @click="pageType=1" data-tabt="1" class="tab1 on"></a>
+                        <a href="javascript:;" @click="pageType=2" data-tabt="2" class="tab2"></a>
                     </div>
                 </div>
                 <!-- 抽至能量核心 -->
@@ -56,14 +55,9 @@
                         <!-- pc -->
                         <div class="lottery-img pc">
                             <img src="pc1/tab1-lottery-img.png" alt="" class="tab1-lott-img">
-                            <video src="pc1/box.mp4"
-                                   class="tab1-lott-video" id="tab1-lott-video" autoplay="autoplay" muted="">您的浏览器不支持
-                                video
-                                标签。
-                            </video>
                         </div>
-                        <p class="tab1-hdd-num" style="text-align:center;font-size:18px;color:#fff">剩余抽奖机会:<span
-                                class="rongyao">{{cfhd_cjj}}</span>次</p>
+                        <p class="tab1-hdd-num" style="text-align:center;font-size:18px;color:#fff">剩余抽奖机会:
+                            <span class="rongyao">{{cfhd_cjj}}</span>次</p>
                         <div class="cq-btn">
                             <a class="lottery-btn1" @click.stop="SendClick(1)"></a>
                             <a class="lottery-btn2" @click.stop="SendClick(10)"></a>
@@ -75,17 +69,17 @@
                             <div class="swiper-container p1-swiper swiper-container-horizontal">
                                 <div class="swiper-wrapper"
                                      style="transform: translate3d(-1316px, 0px, 0px); transition-duration: 0ms;">
-                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
                                          data-swiper-slide-index="9"
                                          style="width: 628px; margin-right: 30px;">
                                         <div class="p1-swiper-shop10 p1-swiper-shop"></div>
                                     </div>
-                                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="0"
+                                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0"
                                          style="width: 628px; margin-right: 30px;">
                                         <!-- <p class="p1-text">蝴蝶刀-雷龙皮肤（同时附赠蝴蝶刀）</p> -->
                                         <div class="p1-swiper-shop1"></div>
                                     </div>
-                                    <div class="swiper-slide " data-swiper-slide-index="1"
+                                    <div class="swiper-slide swiper-slide-next " data-swiper-slide-index="1"
                                          style="width: 628px; margin-right: 30px;">
                                         <div class="p1-swiper-shop2 p1-swiper-shop"></div>
                                     </div>
@@ -121,7 +115,7 @@
                                          style="width: 628px; margin-right: 30px;">
                                         <div class="p1-swiper-shop10 p1-swiper-shop"></div>
                                     </div>
-                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                                    <div class="swiper-slide swiper-slide-duplicate "
                                          data-swiper-slide-index="0" style="width: 628px; margin-right: 30px;">
                                         <!-- <p class="p1-text">蝴蝶刀-雷龙皮肤（同时附赠蝴蝶刀）</p> -->
                                         <div class="p1-swiper-shop1"></div>
@@ -197,7 +191,6 @@
                                                     <span>{{item[3]}}</span>
                                                 </template>
                                             </li>
-
                                         </ul>
                                     </div>
                                 </div>
@@ -401,8 +394,7 @@
             </div>
         </div>
         <!-- 获奖记录表 -->
-        <div class="dia tab-dia9" id="showMyGiftContent_905659"
-             style="outline: none;position: fixed;bottom: 10%;left: 1%;z-index: 9;">
+        <div class="dia tab-dia9" id="showMyGiftContent_905659" style="outline: none;position: fixed;bottom: 10%;left: 1%;z-index: 9;">
             <div class="dia-zc-box dia-bg4">
                 <div class="content-box">
                     <div class="fjb-box">
@@ -438,6 +430,472 @@
             </div>
         </div>
     </div>
+    <div v-show="pageType==2" class="g-wrap" @click="cfhd_type_yyy==0;cfhd_cjjg_yyy=[]" style="margin-top:20px">
+        <div class="tab2-con" data-tabc="2" style="display: block;">
+            <div class="container2">
+                <div class="toptab" style="transition: transform .3s,background-color .3s,box-shadow .3s"
+                     data-hover="1">
+                    <div class="tab-con">
+                        <a href="javascript:;" @click="pageType=1" data-tabt="1" class="tab1 on"></a>
+                        <a href="javascript:;" @click="pageType=2" data-tabt="2" class="tab2"></a>
+                    </div>
+                </div>
+                <!-- 抽至能量核心 -->
+                <div class="part1 center-box part-wait">
+                    <div class="p1-tit1 title"></div>
+                    <div class="lottery-btn-box" style="text-align: center">
+                        <a href="javascript:;" class="t2-p1-btn1" @click="cjjAdd_yyy(1);czjlAdd_yyy(10)"></a>
+                        <a href="javascript:;" class="t2-p1-btn2" @click="cjjAdd_yyy(11);czjlAdd_yyy(100)"></a>
+                        <p class="half-text" style=" font-size: 25px;color: yellow;margin: 20px 0px">
+                            累计充值<span class="cfhdChongzhi" style="color: red">{{cfhd_czjl_yyy}}</span>元,
+                            获得<span class="cfhdChongzhi" style="color: red">{{cfhd_dj_yyy}}</span>CF点,
+                            获得<span class="cfhdChongzhi" style="color: red">{{cfhd_jf_yyy}}</span>积分
+                        </p>
+                    </div>
+                    <div class="lottery-box">
+                        <!-- pc -->
+                        <div class="lottery-img pc">
+                            <div class="lottery-hover-box">
+                                <img src="pc2/tab2-lottery-img.png" alt="" class="tab2-lott-img">
+                            </div>
+                        </div>
+                        <p class="tab2-hdd-num" style="text-align:center;font-size:18px;color:#fff">剩余抽奖机会:
+                            <span class="rongyao_yyy">{{cfhd_cjj_yyy}}</span>次</p>
+                        <div class="cq-btn">
+                            <a href="javascript:;" class="t2-lottery-btn1" @click.stop="SendClick_yyy(1)"></a>
+                            <a href="javascript:;" class="t2-lottery-btn2" @click.stop="SendClick_yyy(10)"></a>
+                        </div>
+                    </div>
+                    <div class="lottery-bottom-box">
+                        <div class="preview-box">
+                            <div class="p1-preview-text"></div>
+                            <div class="swiper-container p1-swiper swiper-container-horizontal">
+                                <div class="swiper-wrapper"
+                                     style="transform: translate3d(-4266px, 0px, 0px); transition-duration: 300ms;">
+                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                                         data-swiper-slide-index="8"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop9-1"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop9-2"></div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="0"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop1-1 hover-shop"
+                                             data-img="p4-hover-prop1.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop1-2 hover-shop"
+                                             data-img="p4-hover-prop2.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop1-3 hover-shop"
+                                             data-img="p4-hover-prop3.png"></div>
+                                    </div>
+                                    <div class="swiper-slide" data-swiper-slide-index="1"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop2-1 hover-shop"
+                                             data-img="p4-hover-prop4.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop2-2 hover-shop"
+                                             data-img="p4-hover-prop5.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop2-3 hover-shop"
+                                             data-img="p4-hover-prop6.png"></div>
+                                    </div>
+                                    <div class="swiper-slide" data-swiper-slide-index="2"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop3-1 hover-shop"
+                                             data-img="p4-hover-prop7.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop3-2 hover-shop"
+                                             data-img="p4-hover-prop8.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop3-3 hover-shop"
+                                             data-img="p4-hover-prop9.png"></div>
+                                    </div>
+                                    <div class="swiper-slide" data-swiper-slide-index="3"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop4-1 hover-shop"
+                                             data-img="p4-hover-prop10.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop4-2 hover-shop"
+                                             data-img="p4-hover-prop11.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop4-3 hover-shop"
+                                             data-img="p4-hover-prop12.png"></div>
+                                    </div>
+                                    <div class="swiper-slide " data-swiper-slide-index="4"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop5-1 hover-shop"
+                                             data-img="p4-hover-prop13.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop5-2 hover-shop"
+                                             data-img="p4-hover-prop14.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop5-3 hover-shop"
+                                             data-img="p4-hover-prop15.png"></div>
+                                    </div>
+                                    <div class="swiper-slide " data-swiper-slide-index="5"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop6-1 hover-shop"
+                                             data-img="p4-hover-prop16.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop6-2 hover-shop"
+                                             data-img="p4-hover-prop17.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop6-3 hover-shop"
+                                             data-img="p4-hover-prop18.png"></div>
+                                    </div>
+                                    <div class="swiper-slide " data-swiper-slide-index="6"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop7-1 hover-shop"
+                                             data-img="p4-hover-prop19.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop7-2 hover-shop"
+                                             data-img="p4-hover-prop20.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop7-3"></div>
+                                    </div>
+                                    <div class="swiper-slide" data-swiper-slide-index="7"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop8-1"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop8-2"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop8-3"></div>
+                                    </div>
+                                    <div class="swiper-slide" data-swiper-slide-index="8"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop9-1"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop9-2"></div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0"
+                                         style="width: 629px; margin-right: 82px;">
+                                        <div class="p1-swiper-shop p1-swiper-shop1-1 hover-shop"
+                                             data-img="p4-hover-prop1.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop1-2 hover-shop"
+                                             data-img="p4-hover-prop2.png"></div>
+                                        <div class="p1-swiper-shop p1-swiper-shop1-3 hover-shop"
+                                             data-img="p4-hover-prop3.png"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="cache-box">
+                            <div class="cache-shop1">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 暂存箱 分解表 -->
+                    <div class="dia tab2-dia1" id="tab2_dia1" style="outline: none;">
+                        <div class="dia-zc-box t2-dia-bg1">
+                            <div class="content-box">
+                                <div class="zcx-box">
+                                    <div class="t2-dia-zcx-tit tit"></div>
+                                    <div class="t2-dia-zcx-bg">
+                                        <table class="tab table_bor">
+                                            <thead>
+                                            <tr>
+                                                <th>名称</th>
+                                                <th>领取道具</th>
+                                                <th>积分</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr v-for="(item,index) in cfhd_zcx_yyy" v-if="cfhd_zcx_yyy.length>0">
+                                                <template
+                                                        v-if="index>=cfhd_zcx_page_yyy.pageStart&&index<=cfhd_zcx_page_yyy.pageEnd">
+                                                    <td>{{item.Name}}</td>
+                                                    <td v-if="item.iStatus==3">
+                                                        <a @click="item.iStatus=1;item.sExtend2=1" style="color:#fff;">[发送仓库]</a>
+                                                    </td>
+                                                    <td v-if="item.iStatus==3">
+                                                        <a @click="item.iStatus=1;item.sExtend2=2;cfhd_jf_yyy=cfhd_jf_yyy+item.Keynum"
+                                                           style="color:#fff;">[分解]</a>
+                                                    </td>
+                                                    <td v-if="item.sExtend2==1">已发送</td>
+                                                    <td v-if="item.sExtend2==1">x</td>
+                                                    <td v-if="item.sExtend2==2">x</td>
+                                                    <td v-if="item.sExtend2==2">已分解</td>
+                                                </template>
+                                            </tr>
+                                            <tr v-else>
+                                                <td colspan="3" align="center">您尚未获得任何礼包</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab2-page">
+                                        <span>{{cfhd_zcx_page_yyy.pageIndex}} / {{cfhd_zcx_page_yyy.pageTotal}}</span>
+                                        <a @click="pageChange_yyy(-1,'zcx')"
+                                           style="user-select:none;text-decoration: none;">上一页</a> /
+                                        <a @click="pageChange_yyy(+1,'zcx')"
+                                           style="user-select:none;text-decoration: none;">下一页</a>
+                                    </div>
+                                </div>
+                                <div class="fjb-box">
+                                    <div class="t2-dia-fjb-tit tit"></div>
+                                    <div class="t2-dia-fjb-bg">
+                                        <div class="dia-fjb-head">
+                                            <span>武器名称</span>
+                                            <span>分解所获积分</span>
+                                        </div>
+                                        <ul>
+                                            <li v-for="(item,index) in base_par_yyy">
+                                                <template v-if="index>0&item[4]==1">
+                                                    <span>{{item[2]}}</span>
+                                                    <span>{{item[3]}}</span>
+                                                </template>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--积分兑换道具 -->
+                <div class="part4 center-box part-wait">
+                    <div class="p4-tit1 title"></div>
+                    <p class="tab2-xydjdh">剩余可用积分:<span class="tab2-xydjdh-num t2-my-jifen">{{cfhd_jf_yyy}}</span></p>
+                    <div class="p4-shop">
+                        <div class="swiper-container p4-swiper swiper-container-horizontal">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide-active" style="width: 1100px;">
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop1 shop-hover" data-img="p4-hover-prop1.png"
+                                             data-index="1">
+                                            <p class="integral"><span>800</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop2 shop-hover" data-img="p4-hover-prop2.png"
+                                             data-index="1">
+                                            <p class="integral"><span>500</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop3 shop-hover" data-img="p4-hover-prop3.png"
+                                             data-index="1">
+                                            <p class="integral"><span>500</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item z">
+                                        <div class="shop p4-shop4 shop-hover" data-img="p4-hover-prop4.png"
+                                             data-index="2">
+                                            <p class="integral"><span>500</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop5 shop-hover" data-img="p4-hover-prop5.png"
+                                             data-index="2">
+                                            <p class="integral"><span>350</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop6 shop-hover" data-img="p4-hover-prop6.png"
+                                             data-index="2">
+                                            <p class="integral"><span>350</span>积分</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-next" style="width: 1100px;">
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop7 shop-hover" data-img="p4-hover-prop7.png"
+                                             data-index="1">
+                                            <p class="integral"><span>300</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop8 shop-hover" data-img="p4-hover-prop8.png"
+                                             data-index="1">
+                                            <p class="integral"><span>250</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop9 shop-hover" data-img="p4-hover-prop9.png"
+                                             data-index="1">
+                                            <p class="integral"><span>250</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop10 shop-hover" data-img="p4-hover-prop10.png"
+                                             data-index="2">
+                                            <p class="integral"><span>250</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop11 shop-hover" data-img="p4-hover-prop11.png"
+                                             data-index="2">
+                                            <p class="integral"><span>200</span>积分</p>
+                                        </div>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop12 shop-hover" data-img="p4-hover-prop12.png"
+                                             data-index="2">
+                                            <p class="integral"><span>200</span>积分</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" style="width: 1100px;">
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop13 shop-hover" data-img="p4-hover-prop13.png"
+                                             data-index="1">
+                                            <p class="integral"><span>100</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-13','点击兑换')"></a>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop14 shop-hover" data-img="p4-hover-prop14.png"
+                                             data-index="1">
+                                            <p class="integral"><span>100</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-14','点击兑换')"></a>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop15 shop-hover" data-img="p4-hover-prop15.png"
+                                             data-index="1">
+                                            <p class="integral"><span>100</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-15','点击兑换')"></a>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop16 shop-hover" data-img="p4-hover-prop16.png"
+                                             data-index="2">
+                                            <p class="integral"><span>50</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-16','点击兑换')"></a>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop17 shop-hover" data-img="p4-hover-prop17.png"
+                                             data-index="2">
+                                            <p class="integral"><span>50</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn17','点击兑换')"></a>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop18 shop-hover" data-img="p4-hover-prop18.png"
+                                             data-index="2">
+                                            <p class="integral"><span>30</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-18','点击兑换')"></a>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide" style="width: 1100px;">
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop19 shop-hover" data-img="p4-hover-prop19.png"
+                                             data-index="1">
+                                            <p class="integral"><span>30</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-19','点击兑换')"></a>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop20 shop-hover" data-img="p4-hover-prop20.png"
+                                             data-index="1">
+                                            <p class="integral"><span>30</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-20','点击兑换')"></a>
+                                    </div>
+                                    <div class="p4-shop-item">
+                                        <div class="shop p4-shop21 shop-hover" data-img="p4-hover-prop21.png"
+                                             data-index="1">
+                                            <p class="integral"><span>10</span>积分</p>
+                                        </div>
+                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
+                                           onclick="PTTSendClick('btn','t2-p4-btn1-21','点击兑换')"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev swiper-button-disabled"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tab2 弹窗 -->
+        <!-- 恭喜你获得以下道具  抽一次-->
+        <div class="dia tab2-dia4" id="tab2_dia_price1" v-if="cfhd_type_yyy==1&&cfhd_cjjg_yyy.length>0"
+             style="position: fixed;top: 25%;left: 50%;z-index: 9;margin-left: -581.5px;">
+            <div class="dia-gxn-box">
+                <div class="tab2-dia-gxn-tit"></div>
+                <div class="tab2-dia-gnx-box">
+                    <div v-for="item in cfhd_cjjg_yyy" :class="`tab2-lott-prop ${item}`"></div>
+                </div>
+                <div class="tab2-dia-gnx-btn-box">
+                    <a href="javascript:;" class="tab2-dia-btn-one" @click.stop="SendClick_yyy(1)"></a>
+                    <a href="javascript:;" class="tab2-dia-btn-ten" @click.stop="SendClick_yyy(10)"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 恭喜你获得以下道具  抽十次-->
+        <div class="dia tab2-dia5" id="tab2_dia_price10" v-if="cfhd_type_yyy==10&&cfhd_cjjg_yyy.length>0"
+             style="position: fixed;top: 25%;left: 50%;z-index: 9;margin-left: -581.5px;">
+            <div class="dia-gxn-box">
+                <div class="tab2-dia-gxn-tit"></div>
+                <div class="tab2-dia-gnx-box">
+                    <div v-for="item in cfhd_cjjg_yyy" :class="`tab2-lott-prop ${item}`"></div>
+                </div>
+                <div class="tab2-dia-gnx-btn-box">
+                    <a href="javascript:;" class="tab2-dia-btn-one" @click.stop="SendClick_yyy(1)"></a>
+                    <a href="javascript:;" class="tab2-dia-btn-ten" @click.stop="SendClick_yyy(10)"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 主奖池概率弹窗 -->
+        <div class="dia tab2-dia7" id="tab2_dia_probability1"
+             style="outline: none;position: fixed;bottom: 10%;right: 1%;z-index: 9;">
+            <div class="dia-probability-box">
+                <table class="probability-con1">
+                    <thead>
+                    <tr>
+                        <td>道具名</td>
+                        <td>概率</td>
+                        <td>获得数量</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="(item,index) in base_par_yyy">
+                        <template v-if="item[6]!=''">
+                            <td>{{item[2]}}</td>
+                            <td>{{item[6]}}</td>
+                            <td>{{item[7]}}</td>
+                        </template>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 获奖记录表 -->
+        <div class="dia tab2-dia9" id="tab2_dia9" style="outline: none;position: fixed;bottom: 10%;left: 1%;z-index: 9;">
+            <div class="dia2-jl-box">
+                <div class="content-box">
+                    <div class="fjb-box">
+                        <div class="t2-dia-hjjl tit"></div>
+                        <div class="t2-dia-fjb-bg">
+                            <table class="table table_bor2">
+                                <thead>
+                                <tr>
+                                    <th>获取时间</th>
+                                    <th>道具名称</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr v-if="cfhd_hjjl_yyy.length>0" v-for="(item,index) in cfhd_hjjl_yyy">
+                                    <template v-if="index>=cfhd_hjjl_page_yyy.pageStart&&index<=cfhd_hjjl_page_yyy.pageEnd">
+                                        <td>{{item.Sj}}</td>
+                                        <td>{{item.Name}}</td>
+                                    </template>
+                                </tr>
+                                <tr v-else>
+                                    <td colspan="3" align="center">您尚未获得任何礼包</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page bxfy">
+                            <span>{{cfhd_hjjl_page_yyy.pageIndex}} / {{cfhd_hjjl_page_yyy.pageTotal}}</span>
+                            <a @click="pageChange_yyy(-1,'hjjl')" style="user-select:none;text-decoration: none;">上一页</a> /
+                            <a @click="pageChange_yyy(+1,'hjjl')" style="user-select:none;text-decoration: none;">下一页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
@@ -450,6 +908,7 @@
     Vue.createApp({
         data() {
             return {
+                pageType: 2,
                 gl: [
                     ['能量核心', '0.20%', 0],
                     ['尼泊尔军刀 朱雀', '0.20%', 0],
@@ -541,6 +1000,61 @@
                     pageStart: 0,//当前分页数据
                     pageEnd: 9
                 },
+                //云悠悠
+                base_par_yyy: [
+                    //概率,概率, 名字, 分解所得, 0:积分 1:道具 2:CF点, 图片类, 概率, 数量
+                    [1, 20, '荣耀核心', 0, 1, 'tab2-lott-prop1', '0.20%', 0],
+                    [21, 35, 'AK-103 枪娘凯萨林', 100, 1, 'tab2-lott-prop2', '0.15%', 0],
+                    [36, 50, 'AUG A1 枪娘维多利亚', 100, 1, 'tab2-lott-prop3', '0.15%', 0],
+                    [51, 65, 'AK-47 银翼杀手', 100, 1, 'tab2-lott-prop4', '0.15%', 0],
+                    [66, 80, '加特林机枪 银翼杀手', 100, 1, 'tab2-lott-prop5', '0.15%', 0],
+                    [81, 110, '尼泊尔军刀 电弧之心', 70, 1, 'tab2-lott-prop6', '0.30%', 0],
+                    [111, 140, '沙漠之鹰 电弧之心', 60, 1, 'tab2-lott-prop7', '0.30%', 0],
+                    [141, 170, 'AK-47 贵族', 50, 1, 'tab2-lott-prop8', '0.30%', 0],
+                    [171, 200, 'M4A1 贵族', 50, 1, 'tab2-lott-prop9', '0.30%', 0],
+                    [201, 230, 'AWM 贵族', 50, 1, 'tab2-lott-prop10', '0.30%', 0],
+                    [231, 280, 'VSK-94 黄金翼', 40, 1, 'tab2-lott-prop11', '0.50%', 0],
+                    [281, 330, '汤姆逊冲锋枪 黄金翼', 40, 1, 'tab2-lott-prop12', '0.50%', 0],
+                    [331, 380, 'M1216 粉红萝莉', 20, 1, 'tab2-lott-prop13', '0.50%', 0],
+                    [381, 480, 'VECTOR 粉红萝莉', 20, 1, 'tab2-lott-prop14', '1.00%', 0],
+                    [481, 580, 'P90 粉红萝莉', 20, 1, 'tab2-lott-prop15', '1.00%', 0],
+                    [581, 980, 'AK-103 灰点', 10, 1, 'tab2-lott-prop16', '4.00%', 0],
+                    [981, 1380, 'SCAR LIGHT 灰点', 10, 1, 'tab2-lott-prop17', '4.00%', 0],
+                    [1381, 1880, '挂饰-手雷', 10, 1, 'tab2-lott-prop18', '5.00%', 0],
+                    [1881, 2380, '挂饰-烟雾弹', 10, 1, 'tab2-lott-prop19', '5.00%', 0],
+                    [2381, 2880, '挂饰-闪光弹', 10, 1, 'tab2-lott-prop20', '5.00%', 0],
+                    [2841, 2930, '10000CF点', 10000, 2, 'tab2-lott-prop21', '0.50%', 0],
+                    [2931, 3130, '5000CF点', 5000, 2, 'tab2-lott-prop22', '2.00%', 0],
+                    [3131, 5130, '1000CF点', 1000, 2, 'tab2-lott-prop23', '20.00%', 0],
+                    [5131, 5150, '100积分', 100, 0, 'tab2-lott-prop24', '0.20%', 0],
+                    [5151, 5200, '50积分', 50, 0, 'tab2-lott-prop25', '0.50%', 0],
+                    [5201, 10000, '10积分', 10, 0, 'tab2-lott-prop26', '48.00%', 0],
+                    [11000, 12000, '手雷 机甲昼虎', 20, 1, '', '', 0],
+                    [13000, 14000, '烟雾弹 机甲昼虎', 20, 1, '', '', 0],
+                    [15000, 16000, '闪光弹 机甲昼虎', 20, 1, '', '', 0],
+                    [17000, 18000, '燃烧瓶 机甲昼虎', 20, 1, '', '', 0],
+                ],
+                cfhd_czjl_yyy: 0,//cfhd充值记录
+                cfhd_cjj_yyy: 0, //cfhd抽奖券
+                cfhd_jf_yyy: 0, //cfhd积分
+                cfhd_dj_yyy: 0, //cfhd点券
+                cfhd_cjcs_yyy: 0, //cfhd抽奖次数
+                cfhd_hjjl_yyy: [],//获奖记录
+                cfhd_zcx_yyy: [],//暂存箱
+                cfhd_cjjg_yyy: [],//抽奖结果
+                cfhd_type_yyy: 0,//抽奖类型 1 或 10
+                cfhd_hjjl_page_yyy: {
+                    pageIndex: 1,//当前页
+                    pageTotal: 1,//总页数
+                    pageStart: 0,//当前分页数据
+                    pageEnd: 9
+                },
+                cfhd_zcx_page_yyy: {
+                    pageIndex: 1,//当前页
+                    pageTotal: 1,//总页数
+                    pageStart: 0,//当前分页数据
+                    pageEnd: 9
+                },
             }
         },
         computed: {
@@ -549,6 +1063,39 @@
             }
         },
         methods: {
+            //获取当前时间
+            format() {
+                const nowDate = new Date();
+                let yy = nowDate.getFullYear();
+                let mm = nowDate.getMonth() + 1;
+                let dd = nowDate.getDate();
+                let hh = nowDate.getHours();
+                let mf = nowDate.getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
+                let ss = nowDate.getSeconds() < 10 ? '0' + new Date().getSeconds() : new Date().getSeconds();
+                let nDate = yy + '-' + mm + '-' + dd + ' ' + hh + ':' + mf + ':' + ss;
+                return nDate
+            },
+            //获取页码
+            pagerCount(count, pageSize) {
+                if (typeof (count) == "number") {
+                    if (count > 0) {
+                        try {
+                            var _pagerCount = count % pageSize == 0 ? count / pageSize : count / pageSize + 1;
+                            var c = _pagerCount.toFixed(0);//小数取整
+                            _pagerCount = c > _pagerCount ? c - 1 : c;//过滤四舍五入
+                            return _pagerCount;
+
+                        } catch (error) {
+                            return 0;
+                        }
+
+                    } else {
+                        return 0;
+                    }
+                } else {
+                    return 0;
+                }
+            },
             //购买抽奖券
             cjjAdd(num) {
                 this.cfhd_cjj = this.cfhd_cjj + num;
@@ -600,39 +1147,6 @@
                     alert('您的抽奖券不足~')
                 }
             },
-            //获取当前时间
-            format() {
-                const nowDate = new Date();
-                let yy = nowDate.getFullYear();
-                let mm = nowDate.getMonth() + 1;
-                let dd = nowDate.getDate();
-                let hh = nowDate.getHours();
-                let mf = nowDate.getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
-                let ss = nowDate.getSeconds() < 10 ? '0' + new Date().getSeconds() : new Date().getSeconds();
-                let nDate = yy + '-' + mm + '-' + dd + ' ' + hh + ':' + mf + ':' + ss;
-                return nDate
-            },
-            //获取页码
-            pagerCount(count, pageSize) {
-                if (typeof (count) == "number") {
-                    if (count > 0) {
-                        try {
-                            var _pagerCount = count % pageSize == 0 ? count / pageSize : count / pageSize + 1;
-                            var c = _pagerCount.toFixed(0);//小数取整
-                            _pagerCount = c > _pagerCount ? c - 1 : c;//过滤四舍五入
-                            return _pagerCount;
-
-                        } catch (error) {
-                            return 0;
-                        }
-
-                    } else {
-                        return 0;
-                    }
-                } else {
-                    return 0;
-                }
-            },
             //改变页数
             pageChange(num, type) {
                 if (type == 'hjjl') {
@@ -652,7 +1166,77 @@
                     this.cfhd_zcx_page.pageEnd = this.cfhd_zcx_page.pageStart + 9
                 }
             },
-        }
+            //购买抽奖券
+            cjjAdd_yyy(num) {
+                this.cfhd_cjj_yyy = this.cfhd_cjj_yyy + num;
+                if (num > 0) {
+                    this.cfhd_xyb_yyy = this.cfhd_xyb_yyy + num;
+                }
+            },
+            //充值记录
+            czjlAdd_yyy(num) {
+                this.cfhd_czjl_yyy = this.cfhd_czjl_yyy + num;
+            },
+            //抽奖
+            SendClick_yyy(num) {
+                let _this = this
+                _this.cfhd_hddtype_yyy = 0
+                _this.cfhd_cjjg_yyy = []
+                _this.cfhd_type_yyy = num
+                if (_this.cfhd_cjj_yyy >= num) {
+                    _this.cjjAdd_yyy(Number('-' + num))//减抽奖券
+                    _this.cfhd_cjcs_yyy = _this.cfhd_cjcs_yyy + num//统计抽奖次数
+                    for (var s = 0; s < num; s++) {
+                        var sjs = Math.ceil(Math.random() * 10000);//概率
+                        for (j = 0; j < _this.base_par_yyy.length; j++) {
+                            var zxs = _this.base_par_yyy[j][0]
+                            var zds = _this.base_par_yyy[j][1]
+                            if (sjs >= zxs && sjs <= zds) {
+                                _this.base_par_yyy[j][7]++
+                                _this.cfhd_hjjl_yyy.push({Sj: _this.format(), Name: _this.base_par_yyy[j][2]})//获奖记录
+                                _this.cfhd_cjjg_yyy.push(_this.base_par_yyy[j][5])
+                                if (_this.base_par_yyy[j][4] == 0) {//积分
+                                    _this.cfhd_jf_yyy = _this.cfhd_jf_yyy + _this.base_par_yyy[j][3]
+                                } else if (_this.base_par_yyy[j][4] == 2) {//CF点
+                                    _this.cfhd_dj_yyy = _this.cfhd_dj_yyy + _this.base_par_yyy[j][3]
+                                } else {//存暂存箱
+                                    _this.cfhd_zcx_yyy.push({
+                                        Name: _this.base_par_yyy[j][2],
+                                        sExtend2: 0,
+                                        iStatus: 3,
+                                        Keynum: _this.base_par_yyy[j][3]
+                                    })//获奖记录
+                                }
+                            }
+                        }
+                    }
+                    _this.cfhd_hjjl_page_yyy.pageTotal = Number(_this.pagerCount(_this.cfhd_hjjl_yyy.length, 10))
+                    _this.cfhd_zcx_page_yyy.pageTotal = Number(_this.pagerCount(_this.cfhd_zcx_yyy.length, 10))
+                } else {
+                    alert('您的抽奖券不足~')
+                }
+            },
+            //改变页数
+            pageChange_yyy(num, type) {
+                if (type == 'hjjl') {
+                    if ((this.cfhd_hjjl_page_yyy.pageIndex == 1 && num < 0) || (this.cfhd_hjjl_page_yyy.pageIndex == this.cfhd_hjjl_page_yyy.pageTotal && num > 0)) {
+                    } else {
+                        this.cfhd_hjjl_page_yyy.pageIndex = this.cfhd_hjjl_page_yyy.pageIndex + num
+                    }
+                    this.cfhd_hjjl_page_yyy.pageStart = 10 * (this.cfhd_hjjl_page_yyy.pageIndex - 1)
+                    this.cfhd_hjjl_page_yyy.pageEnd = this.cfhd_hjjl_page_yyy.pageStart + 9
+                }
+                if (type == 'zcx') {
+                    if ((this.cfhd_zcx_page_yyy.pageIndex == 1 && num < 0) || (this.cfhd_zcx_page_yyy.pageIndex == this.cfhd_zcx_page_yyy.pageTotal && num > 0)) {
+                    } else {
+                        this.cfhd_zcx_page_yyy.pageIndex = this.cfhd_zcx_page_yyy.pageIndex + num
+                    }
+                    this.cfhd_zcx_page_yyy.pageStart = 10 * (this.cfhd_zcx_page_yyy.pageIndex - 1)
+                    this.cfhd_zcx_page_yyy.pageEnd = this.cfhd_zcx_page_yyy.pageStart + 9
+                }
+            },
+        },
+
     }).mount('#app')
     window.onload = function () {
         var swiper = new Swiper('.tab1-con .p1-swiper', {
@@ -660,11 +1244,28 @@
             prevButton: '.tab1-con .lottery-bottom-box .swiper-button-prev',
             spaceBetween: 30,
             autoplay: 10000,
-            loop: true,
+            observer: true,
+            observeParents: true
         });
         var swiperP4 = new Swiper('.tab1-con .p4-swiper', {
             nextButton: '.tab1-con .p4-shop .swiper-button-next',
             prevButton: '.tab1-con .p4-shop .swiper-button-prev',
+            observer: true,
+            observeParents: true
+        });
+        var swiper1 = new Swiper('.tab2-con .p1-swiper', {
+            nextButton: '.tab2-con .lottery-bottom-box .swiper-button-next',
+            prevButton: '.tab2-con .lottery-bottom-box .swiper-button-prev',
+            spaceBetween: 82,
+            autoplay: 10000,
+            observer: true,
+            observeParents: true
+        });
+        var swiperP41 = new Swiper('.tab2-con .p4-swiper', {
+            nextButton: '.tab2-con .p4-shop .swiper-button-next',
+            prevButton: '.tab2-con .p4-shop .swiper-button-prev',
+            observer: true,
+            observeParents: true
         });
     }
     let watermark = {};
