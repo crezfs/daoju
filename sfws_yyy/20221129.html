@@ -727,48 +727,36 @@
                                              data-index="1">
                                             <p class="integral"><span>100</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-13','点击兑换')"></a>
                                     </div>
                                     <div class="p4-shop-item">
                                         <div class="shop p4-shop14 shop-hover" data-img="p4-hover-prop14.png"
                                              data-index="1">
                                             <p class="integral"><span>100</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-14','点击兑换')"></a>
                                     </div>
                                     <div class="p4-shop-item">
                                         <div class="shop p4-shop15 shop-hover" data-img="p4-hover-prop15.png"
                                              data-index="1">
                                             <p class="integral"><span>100</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-15','点击兑换')"></a>
                                     </div>
                                     <div class="p4-shop-item">
                                         <div class="shop p4-shop16 shop-hover" data-img="p4-hover-prop16.png"
                                              data-index="2">
                                             <p class="integral"><span>50</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-16','点击兑换')"></a>
                                     </div>
                                     <div class="p4-shop-item">
                                         <div class="shop p4-shop17 shop-hover" data-img="p4-hover-prop17.png"
                                              data-index="2">
                                             <p class="integral"><span>50</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn17','点击兑换')"></a>
                                     </div>
                                     <div class="p4-shop-item">
                                         <div class="shop p4-shop18 shop-hover" data-img="p4-hover-prop18.png"
                                              data-index="2">
                                             <p class="integral"><span>30</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-18','点击兑换')"></a>
                                     </div>
 
                                 </div>
@@ -778,24 +766,18 @@
                                              data-index="1">
                                             <p class="integral"><span>30</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-19','点击兑换')"></a>
                                     </div>
                                     <div class="p4-shop-item">
                                         <div class="shop p4-shop20 shop-hover" data-img="p4-hover-prop20.png"
                                              data-index="1">
                                             <p class="integral"><span>30</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-20','点击兑换')"></a>
                                     </div>
                                     <div class="p4-shop-item">
                                         <div class="shop p4-shop21 shop-hover" data-img="p4-hover-prop21.png"
                                              data-index="1">
                                             <p class="integral"><span>10</span>积分</p>
                                         </div>
-                                        <a href="javascript:;" class="t2-p4-btn t2-p4-btn1"
-                                           onclick="PTTSendClick('btn','t2-p4-btn1-21','点击兑换')"></a>
                                     </div>
                                 </div>
                             </div>
@@ -1063,6 +1045,10 @@
             }
         },
         methods: {
+            //清空数据
+            clearData(){
+                Object.assign(this.$data, this.$options.data.call(this))
+            },
             //获取当前时间
             format() {
                 const nowDate = new Date();
@@ -1138,6 +1124,7 @@
                                         Keynum: _this.base_par[j][3]
                                     })//获奖记录
                                 }
+                                break;
                             }
                         }
                     }
@@ -1207,6 +1194,7 @@
                                         Keynum: _this.base_par_yyy[j][3]
                                     })//获奖记录
                                 }
+                                break;
                             }
                         }
                     }

@@ -426,7 +426,7 @@ body{background-color:#131331}
 .tab2-con .container2 .part1 .lottery-box .lottery-img.tab1-lott-ani .tab2-lott-video{display:block}
 .tab2-con .container2 .part1 .lottery-box .lottery-img.tab1-lott-ani .lottery-hover-box{display:none}
 .tab2-con .container2 .part1 .lottery-box .lottery-img .lottery-hover-box{display:block;width:533px;height:575px;margin:0 auto;position:relative}
-.tab2-con .container2 .part1 .lottery-box .lottery-img .lottery-hover-box::after{display:none;position:absolute;width:1003px;height:742px;content:'';background:url(pc2/lottery-prop-img.png) no-repeat center top;left:50%;top:50%;transform:translate(-50%,-50%)}
+.tab2-con .container2 .part1 .lottery-box .lottery-img .lottery-hover-box::after{display:none;position:absolute;width:1003px;height:742px;content:'';left:50%;top:50%;transform:translate(-50%,-50%)}
 .tab2-con .container2 .part1 .lottery-box .lottery-img .lottery-hover-box:hover::after{display:block}
 .tab2-con .container2 .part1 .lottery-box .lottery-img .tab2-lott-img{display:block;width:533px;height:575px;margin:0 auto;position:relative}
 .tab2-con .container2 .part1 .lottery-box .lottery-img video{display:none;width:575px;height:575px;margin:0 auto 0;overflow:hidden}
