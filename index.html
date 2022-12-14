@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>初始页</title>
+    <style>
+        *{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            user-select: none;
+            text-decoration: none;
+            font-size: 26px;
+            height: 30px;
+            line-height: 30px;
+            font-weight: 900;
+            display: block;
+            color: rgb(228, 199, 129);
+            margin: 10px 0;
+        }
+    </style>
 </head>
-<body>
-<a href="pifu/test" style="color: red;user-select:none;text-decoration: none;margin: 0 15px">测试网站</a>
+<body style="background-color: #30120a;">
+<div id="app" style="width: 1200px;margin:0 auto;background: url(tab1-bg.png) no-repeat;background-size: 100%; overflow: hidden;">
+    <div style=" margin-top: 600px; text-align: center;">
+        <a v-for="(item,index) in mList" :href="item[0]">{{item[1]}}</a>
+    </div>
+</div>
 </body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+
+    //概率
+    Vue.createApp({
+        data() {
+            return {
+                mList: [
+                    ['pifu/test','测试网站'],
+                    ['duxie/20221025','毒蝎角色抽奖活动'],
+                    ['shj/20221104','山海经抽奖活动'],
+                    ['sfws_yyy/20221129','103十方武圣-云悠悠抽奖活动'],
+                ],
+            }
+        }
+    }).mount('#app')
+</script>
 </html>
