@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+<link rel="stylesheet" href="zui/zui.css">
+
+</head>
+<body>
+<div  id="app" class="container">
+
+<form class="form w-56">
+<div class="input-control has-prefix">
+  <span class="input-control-prefix">时间</span>
+  <input type="text" class="form-control" placeholder="请填写" />
+</div>
+<div class="input-group">
+  <div class="input-group-control" data-zui="picker" data-items='[{"text": "12：30", "value": "12：30"}, {"text": "13：30", "value": "13：30"}]'></div>
+</div>
+<textarea rows="5" class="form-control" placeholder="输入一些文本">
+Hello, world!
+</textarea>
+
+</form>
+ 
+</div>
+<script src="zui/zui.js"></script>
+  
+</body>
+<script src="vue/vue.global.min.js"></script>
+<script src="vue/jquery.min.js"></script>
+
+<script>
+
+    //概率
+    Vue.createApp({
+        data() {
+            return {
+                t1: "https://syc.qq.com/cp/a",
+                t2: "/",
+                ts: "90",
+                sj: "",
+                tsnum: []
+            }
+        },
+        computed: {},
+        methods: {
+            a11(t) {
+                switch (t) {
+                   case "netbar":
+                       this.t1 = "https://cfhd.cf.qq.com/cp/a"
+                       this.t2 = "netbar/"
+                        break;
+                    case "wb":
+                        this.t1 = "https://cf.qq.com/cp/a"
+                        this.t2 = "wb/"
+                        break;
+                    case "store":
+                        this.t1 = "https://act.daoju.qq.com/act/a"
+                        this.t2 = "store/"
+                        break;
+                    case "mact":
+                        this.t1 = "https://cfhd.cf.qq.com/cp/a"
+                        this.t2 = "mact/"
+                        break;
+                }
+            },
+            b11() {
+                let a = this.ts
+                let b = []
+                for (let i = 0; i < a; i++) {
+                    b.push(this.addDay(i, new Date(this.sj)))
+                }
+                this.tsnum = b
+            },
+            addDay(dayNumber, date) {
+                date = date ? date : new Date();
+                var ms = dayNumber * (1000 * 60 * 60 * 24)
+                var nowDate = new Date(date.getTime() + ms);
+                let yy = nowDate.getFullYear();
+                let mm = nowDate.getMonth() + 1 < 10 ? '0' + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;
+                let dd = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
+                let nDate = yy + "" + mm + "" + dd;
+                return nDate;
+            },
+            //获取当前时间
+            format() {
+                const nowDate = new Date();
+                let yy = nowDate.getFullYear();
+                let mm = nowDate.getMonth() + 1 - 1 < 10 ? '0' + (nowDate.getMonth() + 1 - 1) : nowDate.getMonth() + 1 - 1;
+                let nDate = yy + '-' + mm + '-01'
+                return nDate
+            },
+        },
+        mounted() {
+            this.sj = this.format()
+        }
+    }).mount('#app')
+</script>
+</html>
