@@ -1,77 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="text-4xl">
+
 <head>
     <meta charset="UTF-8">
     <title>测试</title>
-<link rel="stylesheet" href="zui/zui.css">
+    <link rel="stylesheet" href="zui/zui.css">
+    <style>
+        :root {
+            --checkbox-size: 50px
+        }
 
+        .radio-primary>label:before {
+            top: 12px
+        }
+
+        .radio-primary>label:after {
+            top: 20px
+        }
+    </style>
 </head>
+
 <body>
-<div  id="app" class="container">
+    <div id="app" class="container p-4">
 
-<form class="form w-56">
-<div class="input-control has-prefix">
-  <span class="input-control-prefix">时间</span>
-  <input type="text" class="form-control" placeholder="请填写" />
-</div>
-<div class="input-group">
-  <div class="input-group-control" data-zui="picker" data-items='[{"text": "12：30", "value": "12：30"}, {"text": "13：30", "value": "13：30"}]'></div>
-</div>
-<textarea rows="5" class="form-control" placeholder="输入一些文本">
-Hello, world!
+        <form class="form w-56 m-auto">
+            <div class="input-control has-prefix size-lg">
+                <span class="input-control-prefix">早</span>
+                <input type="text" class="form-control" placeholder="请填写" v-model="zao" />
+            </div>
+
+            <div class="check-list-inline text-3xl gap-3">
+                <div class="radio-primary">
+                    <input type="radio" name="primaryRadioGroup1" id="primaryradio1" checked="checked" v-model="zhong" value="12：30">
+                    <label for="primaryradio1">12：30</label>
+                </div>
+                <div class="radio-primary">
+                    <input type="radio" name="primaryRadioGroup1" id="primaryradio2" v-model="zhong" value="13：30">
+                    <label for="primaryradio2">13：30</label>
+                </div>
+            </div>
+
+            <div class="input-control has-prefix size-lg">
+                <span class="input-control-prefix">晚</span>
+                <input type="text" class="form-control" placeholder="请填写" v-model="wan" />
+            </div>
+
+            <textarea rows="5" class="form-control" placeholder="输入一些文本" v-model="tx" ref="myTextarea">
+	12月18号， 白班，张富生8：00—12：00  12：30—21：00喷粉
 </textarea>
+            <button type="button" class="btn success size-xl rounded-xl" @click="btn1">复制</button>
+        </form>
 
-</form>
- 
-</div>
-<script src="zui/zui.js"></script>
-  
+    </div>
+    <script src="zui/zui.js"></script>
+
 </body>
 <script src="vue/vue.global.min.js"></script>
 <script src="vue/jquery.min.js"></script>
 
 <script>
-
     //概率
     Vue.createApp({
         data() {
             return {
-                t1: "https://syc.qq.com/cp/a",
-                t2: "/",
-                ts: "90",
+                name: "",
                 sj: "",
-                tsnum: []
+                by: "白班",
+                zao: "8：00",
+                zhong: "12：30",
+                wan: "",
             }
         },
-        computed: {},
-        methods: {
-            a11(t) {
-                switch (t) {
-                   case "netbar":
-                       this.t1 = "https://cfhd.cf.qq.com/cp/a"
-                       this.t2 = "netbar/"
-                        break;
-                    case "wb":
-                        this.t1 = "https://cf.qq.com/cp/a"
-                        this.t2 = "wb/"
-                        break;
-                    case "store":
-                        this.t1 = "https://act.daoju.qq.com/act/a"
-                        this.t2 = "store/"
-                        break;
-                    case "mact":
-                        this.t1 = "https://cfhd.cf.qq.com/cp/a"
-                        this.t2 = "mact/"
-                        break;
-                }
+        computed: {
+            tx() {
+                return this.sj + "， " + this.by + "，" + this.name + this.zao + "—12：00  " + this.zhong + "—" + this.wan + "喷粉";
             },
-            b11() {
-                let a = this.ts
-                let b = []
-                for (let i = 0; i < a; i++) {
-                    b.push(this.addDay(i, new Date(this.sj)))
-                }
-                this.tsnum = b
+        },
+        methods: {
+            btn1() {
+                const textareaContent = this.$refs.myTextarea.value;
+                console.log(textareaContent);
+                // navigator.clipboard.writeText 该方法需要在安全域下才能够使用，比如：https 协议的地址、127.0.0.1、localhost
+                navigator.clipboard.writeText(textareaContent).then(() => {
+                        zui.Messager.show({
+                            content: '复制成功',
+                            type: 'success',
+                        });
+                    })
+                    .catch((err) => {
+                        // 复制失败
+                        zui.Messager.show({
+                            content: '复制失败',
+                            type: 'error',
+                        });
+                    });
             },
             addDay(dayNumber, date) {
                 date = date ? date : new Date();
@@ -88,13 +110,48 @@ Hello, world!
                 const nowDate = new Date();
                 let yy = nowDate.getFullYear();
                 let mm = nowDate.getMonth() + 1 - 1 < 10 ? '0' + (nowDate.getMonth() + 1 - 1) : nowDate.getMonth() + 1 - 1;
-                let nDate = yy + '-' + mm + '-01'
+                let dd = nowDate.getDate()
+                let nDate = mm + '月' + dd + '号'
                 return nDate
+            },
+            th() {
+                const nowDate = new Date();
+                let h = nowDate.getMinutes() < 30 ? nowDate.getHours() + '：00' : nowDate.getHours() + '：30';
+                return h
             },
         },
         mounted() {
-            this.sj = this.format()
+            this.sj = this.format();
+            this.wan = this.th()
+        },
+        created() {
+            /**
+             * 获取链接参数为对象
+             */
+            fun11 = (url) => {
+                let params = {}
+                if (window.location.href.indexOf("?") > 0) {
+                    const search = url.split('?')[1]
+                    const searchArr = search.split('&')
+                    searchArr.forEach((item) => {
+                        const param = item.split('=')
+                        params[param[0]] = param[1]
+                    })
+                }
+                return params
+            }
+            getParamsString = (params) => {
+                let urlSearch = ''
+                let connector = '?'
+                for (const x in params) {
+                    urlSearch += `${connector}${x}=${params[x]}`
+                    connector = '&'
+                }
+                return urlSearch
+            }
+            this.name = fun11(window.location.href).name != null ? fun11(window.location.href).name : "张富生"
         }
     }).mount('#app')
 </script>
+
 </html>
