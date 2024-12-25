@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="text-4xl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>测试</title>
     <link rel="stylesheet" href="zui/zui.css">
     <style>
+        html {
+            font-size: 55px;
+        }
+
         :root {
             --checkbox-size: 50px
         }
@@ -23,10 +27,10 @@
 <body>
     <div id="app" class="container p-4">
 
-        <form class="form w-56 m-auto">
+        <form class="form m-auto">
             <div class="input-control has-prefix size-lg">
                 <span class="input-control-prefix">早</span>
-                <input type="text" class="form-control" placeholder="请填写" v-model="zao" />
+                <input type="text" class="form-control" placeholder="请填写" style="font-size: 1.5rem;" v-model="zao" />
             </div>
 
             <div class="check-list-inline text-3xl gap-3">
@@ -42,12 +46,12 @@
 
             <div class="input-control has-prefix size-lg">
                 <span class="input-control-prefix">晚</span>
-                <input type="text" class="form-control" placeholder="请填写" v-model="wan" />
+                <input type="text" class="form-control" placeholder="请填写" style="font-size: 1.5rem;" v-model="wan" />
             </div>
 
-            <textarea rows="5" class="form-control" placeholder="输入一些文本" v-model="tx" ref="myTextarea">
-	12月18号， 白班，张富生8：00—12：00  12：30—21：00喷粉
-</textarea>
+            <textarea rows="5" class="form-control" placeholder="输入一些文本" v-model="tx" ref="myTextarea" style="font-size: 1rem;">
+                12月18号， 白班，张富生8：00—12：00  12：30—21：00喷粉
+            </textarea>
             <button type="button" class="btn success size-xl rounded-xl" @click="btn1">复制</button>
         </form>
 
