@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>打卡</title>
-    <link rel="stylesheet" href="zui/zui.css">
     <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="zui/zui.css">
     <style>
         html {
             font-size: 55px;
@@ -16,11 +16,11 @@
         }
 
         .radio-primary>label:before {
-            top: 35px
+            top: 12px
         }
 
         .radio-primary>label:after {
-            top: 43px
+            top: 20px
         }
     </style>
 </head>
@@ -85,7 +85,6 @@
             btn1() {
                 const textareaContent = this.$refs.myTextarea.value;
                 console.log(textareaContent);
-                // navigator.clipboard.writeText 该方法需要在安全域下才能够使用，比如：https 协议的地址、127.0.0.1、localhost
                 navigator.clipboard.writeText(textareaContent).then(() => {
                         zui.Messager.show({
                             content: '复制成功',
@@ -154,7 +153,8 @@
                 }
                 return urlSearch
             }
-            this.name = fun11(window.location.href).name != null ? fun11(window.location.href).name : "张富生"
+            this.name = fun11(window.location.href).name != null ? fun11(window.location.href).name : "张富生";
+btn1();
         }
     }).mount('#app')
 </script>
