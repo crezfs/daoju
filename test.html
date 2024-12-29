@@ -124,10 +124,6 @@
                 return h
             },
         },
-        mounted() {
-            this.sj = this.format();
-            this.wan = this.th();this.btn1();
-        },
         created() {
             /**
              * 获取链接参数为对象
@@ -155,7 +151,13 @@
             }
             this.name = fun11(window.location.href).name != null ? fun11(window.location.href).name : "张富生";
 
-        }
+        },
+mounted() {
+            this.sj = this.format();
+            this.wan = this.th();
+
+        },
+updated(){this.btn1();}
     }).mount('#app')
 </script>
 
