@@ -16,11 +16,11 @@
         }
 
         .radio-primary>label:before {
-            top: 12px
+            top: 36px
         }
 
         .radio-primary>label:after {
-            top: 20px
+            top: 44px
         }
     </style>
 </head>
@@ -29,6 +29,7 @@
     <div id="app" class="container p-4">
 
         <form class="form m-auto">
+             <button type="button" class="btn warn size-xl rounded-xl" @click="btn2">夜班</button>
             <div class="input-control has-prefix size-lg">
                 <span class="input-control-prefix">早</span>
                 <input type="text" class="form-control" placeholder="请填写" style="font-size: 1.5rem;" v-model="zao" />
@@ -82,6 +83,11 @@
             },
         },
         methods: {
+            btn2() {
+                this.sj=this.formatpreviousDay();
+                this.by="夜班"
+                return this.sj + "， " + this.by + "，" + this.name + "20：00—8：00  " + "喷粉";
+            },
             btn1() {
                 const textareaContent = this.$refs.myTextarea.value;
                 console.log(textareaContent);
@@ -115,6 +121,25 @@
                 let yy = nowDate.getFullYear();
                 let mm = nowDate.getMonth() + 1;
                 let dd = nowDate.getDate()
+                let nDate = mm + '月' + dd + '号'
+                return nDate
+            },
+            //获取前一天时间
+            formatpreviousDay() {
+                // 创建一个Date对象，表示当前时间
+                Date nowDate = new Date();
+                
+                // 获取当前时间的毫秒值
+                long currentMillis = currentDate.getTime();
+                
+                // 计算前一天的毫秒值，这里减去一天的毫秒数（1天 = 24小时 * 60分钟 * 60秒 * 1000毫秒）
+                long previousDayMillis = currentMillis - (24 * 60 * 60 * 1000);
+                
+                // 使用前一天的毫秒值创建一个新的Date对象
+                Date previousDayDate = new Date(previousDayMillis);
+                let yy = nowDate.getFullYear();
+                let mm = nowDate.getMonth() + 1;
+                let dd = nowDate.getDate();
                 let nDate = mm + '月' + dd + '号'
                 return nDate
             },
