@@ -52,7 +52,7 @@
             </div>
 
             <textarea rows="5" class="form-control" placeholder="输入一些文本" v-model="tx" ref="myTextarea" style="font-size: 1rem;">
-                12月18号， 白班，张富生8：00—12：00  12：30—21：00喷粉
+                12月18号，白班，张富生8：00—12：00  12：30—21：00喷粉
             </textarea>
             <button type="button" class="btn success size-xl rounded-xl" @click="btn1">复制</button>
         </form>
@@ -84,9 +84,21 @@
         },
         methods: {
             btn2() {
-                this.sj=this.formatpreviousDay();
-                this.by="夜班"
-                return this.sj + "， " + this.by + "，" + this.name + "20：00—8：00  " + "喷粉";
+		let textareaContent=this.formatpreviousDay() + "，夜班，" + this.name + "20：00—8：00  " + "喷粉";
+		console.log(textareaContent);
+                navigator.clipboard.writeText(textareaContent).then(() => {
+                        zui.Messager.show({
+                            content: '复制成功',
+                            type: 'success',
+                        });
+                    })
+                    .catch((err) => {
+                        // 复制失败
+                        zui.Messager.show({
+                            content: '复制失败',
+                            type: 'error',
+                        });
+                    });
             },
             btn1() {
                 const textareaContent = this.$refs.myTextarea.value;
@@ -130,10 +142,10 @@
                 const  currentDate = new Date();
                 
                 // 获取当前时间的毫秒值
-                long currentMillis = currentDate.getTime();
+                let currentMillis = currentDate.getTime();
                 
                 // 计算前一天的毫秒值，这里减去一天的毫秒数（1天 = 24小时 * 60分钟 * 60秒 * 1000毫秒）
-                long previousDayMillis = currentMillis - (24 * 60 * 60 * 1000);
+                let previousDayMillis = currentMillis - (24 * 60 * 60 * 1000);
                 
                 // 使用前一天的毫秒值创建一个新的Date对象
                 const previousDayDate = new Date(previousDayMillis);
@@ -182,7 +194,7 @@ mounted() {
             this.wan = this.th();
 
         },
-updated(){this.btn1();}
+	updated(){this.btn1();}
     }).mount('#app')
 </script>
 
