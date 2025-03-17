@@ -29,7 +29,7 @@
     <div id="app" class="container p-4">
 
         <form class="form m-auto">
-             <button type="button" class="btn warn size-xl rounded-xl" @click="btn2">夜班</button>
+             <button type="button" class="btn warning size-xl rounded-xl" @click="btn2">夜班</button>
             <div class="input-control has-prefix size-lg">
                 <span class="input-control-prefix">早</span>
                 <input type="text" class="form-control" placeholder="请填写" style="font-size: 1.5rem;" v-model="zao" />
@@ -127,7 +127,7 @@
             //获取前一天时间
             formatpreviousDay() {
                 // 创建一个Date对象，表示当前时间
-                Date nowDate = new Date();
+                const  currentDate = new Date();
                 
                 // 获取当前时间的毫秒值
                 long currentMillis = currentDate.getTime();
@@ -136,10 +136,10 @@
                 long previousDayMillis = currentMillis - (24 * 60 * 60 * 1000);
                 
                 // 使用前一天的毫秒值创建一个新的Date对象
-                Date previousDayDate = new Date(previousDayMillis);
-                let yy = nowDate.getFullYear();
-                let mm = nowDate.getMonth() + 1;
-                let dd = nowDate.getDate();
+                const previousDayDate = new Date(previousDayMillis);
+                let yy = previousDayDate.getFullYear();
+                let mm = previousDayDate.getMonth() + 1;
+                let dd = previousDayDate.getDate();
                 let nDate = mm + '月' + dd + '号'
                 return nDate
             },
