@@ -84,11 +84,11 @@
         },
         methods: {
             btn2() {
-		let textareaContent=this.formatpreviousDay() + "，夜班，" + this.name + "20：00—8：00  " + "喷粉";
+		let textareaContent=this.formatpreviousDay() + "，夜班，" + this.name + "20：00——" + this.wan + "喷粉";
 		console.log(textareaContent);
                 navigator.clipboard.writeText(textareaContent).then(() => {
                         zui.Messager.show({
-                            content: '复制成功',
+                            content: '夜班复制成功',
                             type: 'success',
                         });
                     })
@@ -96,7 +96,7 @@
                         // 复制失败
                         zui.Messager.show({
                             content: '复制失败',
-                            type: 'error',
+                            type: 'danger',
                         });
                     });
             },
@@ -113,7 +113,7 @@
                         // 复制失败
                         zui.Messager.show({
                             content: '复制失败',
-                            type: 'error',
+                            type: 'danger',
                         });
                     });
             },
